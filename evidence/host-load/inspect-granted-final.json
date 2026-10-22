@@ -1,0 +1,103 @@
+{
+  "workspaceDir": "/tmp/ato-host-probe-ss90upjr/workspace",
+  "plugin": {
+    "id": "ato-isolated-probe",
+    "name": "ATO isolated probe",
+    "description": "Read-only host registration probe",
+    "packageVersion": "0.0.0",
+    "version": "0.0.0",
+    "packageName": "ato-isolated-probe",
+    "format": "openclaw",
+    "source": "/tmp/ato-host-probe-ss90upjr/probe/index.ts",
+    "rootDir": "/tmp/ato-host-probe-ss90upjr/probe",
+    "origin": "config",
+    "workspaceDir": "/tmp/ato-host-probe-ss90upjr/workspace",
+    "trust": {
+      "reason": "record-missing",
+      "registryPath": "/tmp/ato-host-probe-ss90upjr/state/state/openclaw.sqlite",
+      "origin": "config"
+    },
+    "enabled": true,
+    "compat": [],
+    "explicitlyEnabled": true,
+    "activated": true,
+    "activationSource": "explicit",
+    "activationReason": "enabled in config",
+    "syntheticAuthRefs": [],
+    "status": "loaded",
+    "toolNames": [],
+    "hookNames": [],
+    "channelIds": [],
+    "cliBackendIds": [],
+    "providerIds": [],
+    "embeddingProviderIds": [],
+    "speechProviderIds": [],
+    "realtimeTranscriptionProviderIds": [],
+    "realtimeVoiceProviderIds": [],
+    "mediaUnderstandingProviderIds": [],
+    "transcriptSourceProviderIds": [],
+    "imageGenerationProviderIds": [],
+    "videoGenerationProviderIds": [],
+    "musicGenerationProviderIds": [],
+    "webFetchProviderIds": [],
+    "webSearchProviderIds": [],
+    "migrationProviderIds": [],
+    "contextEngineIds": [],
+    "agentHarnessIds": [],
+    "cliCommands": [],
+    "services": [
+      "ato-isolated-probe-service"
+    ],
+    "gatewayDiscoveryServiceIds": [],
+    "commands": [],
+    "httpRoutes": 0,
+    "hookCount": 1,
+    "configSchema": true,
+    "configJsonSchema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {}
+    },
+    "imported": true,
+    "dependencyStatus": {
+      "hasDependencies": false,
+      "installed": true,
+      "requiredInstalled": true,
+      "optionalInstalled": true,
+      "missing": [],
+      "missingOptional": [],
+      "dependencies": [],
+      "optionalDependencies": []
+    }
+  },
+  "shape": "non-capability",
+  "capabilityMode": "none",
+  "capabilityCount": 0,
+  "capabilities": [],
+  "typedHooks": [
+    {
+      "name": "llm_output"
+    }
+  ],
+  "customHooks": [],
+  "tools": [],
+  "commands": [],
+  "cliCommands": [],
+  "services": [
+    "ato-isolated-probe-service"
+  ],
+  "decisions": [],
+  "gatewayDiscoveryServices": [],
+  "gatewayMethods": [],
+  "mcpServers": [],
+  "lspServers": [],
+  "httpRouteCount": 0,
+  "bundleCapabilities": [],
+  "diagnostics": [],
+  "policy": {
+    "allowConversationAccess": true,
+    "allowedModels": [],
+    "hasAllowedModelsConfig": false
+  },
+  "compatibility": []
+}

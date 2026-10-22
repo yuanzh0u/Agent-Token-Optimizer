@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "publicationId": "9bc183d0-6bb1-4927-bb24-e081926c7782",
+  "collectedAt": 1792580341666,
+  "staleAfterMs": 900000,
+  "provenance": {
+    "synthetic": true,
+    "realModelRequests": 0
+  },
+  "summary": {
+    "schemaVersion": 1,
+    "sourceScope": {
+      "kind": "deployment",
+      "activeSources": [
+        "SYNTHETIC-offline-fixture"
+      ],
+      "inactiveSources": [],
+      "inactiveRecordCount": 0
+    },
+    "globalComplete": false,
+    "global": {
+      "eventCount": 0,
+      "totals": {
+        "uncachedInput": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null
+      },
+      "knownTotals": {
+        "uncachedInput": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "knownCounts": {
+        "uncachedInput": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      }
+    },
+    "groups": [
+      {
+        "source": "SYNTHETIC-offline-fixture",
+        "agentId": "arbitrary-agent-42",
+        "sessionId": "synthetic-session",
+        "runId": "synthetic-run",
+        "runtime": "offline-fixture",
+        "provider": "SYNTHETIC-no-provider-called",
+        "model": "<synthetic-model>",
+        "eventCount": 1,
+        "totals": {
+          "uncachedInput": 120,
+          "output": 20,
+          "cacheRead": 40,
+          "cacheWrite": 0
+        },
+        "knownTotals": {
+          "uncachedInput": 120,
+          "output": 20,
+          "cacheRead": 40,
+          "cacheWrite": 0
+        },
+        "knownCounts": {
+          "uncachedInput": 1,
+          "output": 1,
+          "cacheRead": 1,
+          "cacheWrite": 1
+        }
+      }
+    ],
+    "perSource": [
+      {
+        "source": "SYNTHETIC-offline-fixture",
+        "eventCount": 1,
+        "totals": {
+          "uncachedInput": 120,
+          "output": 20,
+          "cacheRead": 40,
+          "cacheWrite": 0
+        },
+        "knownTotals": {
+          "uncachedInput": 120,
+          "output": 20,
+          "cacheRead": 40,
+          "cacheWrite": 0
+        },
+        "knownCounts": {
+          "uncachedInput": 1,
+          "output": 1,
+          "cacheRead": 1,
+          "cacheWrite": 1
+        },
+        "quarantinedCount": 0,
+        "reasons": []
+      }
+    ],
+    "coverage": {
+      "status": "degraded",
+      "reasons": [
+        "missing shared provider/account/request identity: per-source totals only"
+      ]
+    },
+    "quarantined": 0,
+    "localEstimates": {
+      "eventCount": 0,
+      "totals": {
+        "uncachedInput": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null
+      },
+      "knownTotals": {
+        "uncachedInput": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "knownCounts": {
+        "uncachedInput": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      }
+    }
+  }
+}

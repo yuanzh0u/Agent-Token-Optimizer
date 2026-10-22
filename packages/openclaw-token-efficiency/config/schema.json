@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-token-optimizer.invalid/policy-v1.schema.json",
+  "title": "Portable workload policy v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "profiles", "bindings"],
+  "properties": {
+    "version": {"const": 1},
+    "defaults": {"$ref": "#/$defs/control"},
+    "profiles": {
+      "type": "object",
+      "propertyNames": {"minLength": 1, "not": {"enum": ["__proto__", "prototype", "constructor"]}},
+      "additionalProperties": {"$ref": "#/$defs/control"}
+    },
+    "bindings": {"type": "array", "items": {"$ref": "#/$defs/binding"}}
+  },
+  "$defs": {
+    "control": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "mode": {"enum": ["observe", "enforce"]},
+        "features": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "loopGuard": {"type": "boolean"}, "outputCompression": {"type": "boolean"},
+            "historyCompaction": {"type": "boolean"}, "pruning": {"type": "boolean"}, "requestGate": {"type": "boolean"}
+          }
+        },
+        "limits": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "windowTokens": {"type": "integer", "minimum": 0, "maximum": 9007199254740991},
+            "outputReserveTokens": {"type": "integer", "minimum": 0, "maximum": 9007199254740991},
+            "safetyMarginTokens": {"type": "integer", "minimum": 0, "maximum": 9007199254740991},
+            "softContextTokens": {"type": "integer", "minimum": 0, "maximum": 9007199254740991}
+          }
+        },
+        "permissions": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "binding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "agentId", "profile"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1}, "agentId": {"type": "string", "minLength": 1},
+        "runId": {"type": "string", "minLength": 1}, "profile": {"type": "string", "minLength": 1},
+        "overrides": {"$ref": "#/$defs/control"}
+      }
+    }
+  }
+}

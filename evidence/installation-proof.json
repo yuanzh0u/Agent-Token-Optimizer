@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "packageInstall": "offline local tarball with --ignore-scripts --omit=peer",
+  "cliHelp": true,
+  "privateInit": true,
+  "configVerify": true,
+  "openClawInstalled": false,
+  "runtimeDependenciesInstalled": 0,
+  "archivePrivateArtifactsAbsent": true,
+  "requiredAgentDocumentationPresent": true,
+  "realModelRequests": 0
+}

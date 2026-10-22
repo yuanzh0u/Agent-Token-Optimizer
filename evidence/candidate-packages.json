@@ -1,0 +1,76 @@
+{
+  "capturedAt": "2026-10-21T17:23:05.384259+08:00",
+  "hostVersion": "2026.10.3",
+  "packages": [
+    {
+      "name": "@openclaw/tokenjuice",
+      "version": "2026.10.3",
+      "integrity": "sha512-CtWXVlRgXlFRwnG51V4t4zXPZSz4kS+GN4r02J0PdZew7+SN4zMbsazHSnK3jOSYvIQYMqbZ4+7X8vyecMQZOw==",
+      "tarball": "https://registry.npmjs.org/@openclaw/tokenjuice/-/tokenjuice-2026.10.3.tgz",
+      "peerDependencies": {
+        "openclaw": ">=2026.10.3"
+      },
+      "integrityVerified": true,
+      "downloadOnly": true,
+      "lifecycleScriptsExecuted": false,
+      "installedInProduction": false,
+      "adoption": "pending_validation",
+      "packageJsonSha256": "bee6e5ae5ea87b530d580c241091d079373ae2a23ee679dd1972c7db562e74c2"
+    },
+    {
+      "name": "@martian-engineering/lossless-claw",
+      "version": "1.2.0",
+      "integrity": "sha512-xC2b8bp72tsUKB1iqKN5TYiCJoHW9rAVdMSdY0cjJuxR+6irVUwvW2ziFfYOL/qCTi4DHr3eUCgDIcTzhuifYA==",
+      "tarball": "https://registry.npmjs.org/@martian-engineering/lossless-claw/-/lossless-claw-1.2.0.tgz",
+      "peerDependencies": {
+        "openclaw": ">=2026.9.2"
+      },
+      "integrityVerified": true,
+      "downloadOnly": true,
+      "lifecycleScriptsExecuted": false,
+      "installedInProduction": false,
+      "adoption": "pending_validation",
+      "packageJsonSha256": "17bd54e7c931314c8e3c3b3ef21318f723609898e9a35f4aa8620408d5262fbf"
+    },
+    {
+      "name": "tokenjuice",
+      "version": "0.8.5",
+      "integrity": "sha512-5soJ9faUut2eAC8f4rHxBH3lipdK2mtgy6N8uWvYCnt3MZ37tKYeR6e5PjEyyO3NrSkt1PMG3KZxQIc10urA3w==",
+      "tarball": "https://registry.npmjs.org/tokenjuice/-/tokenjuice-0.8.5.tgz",
+      "peerDependencies": {},
+      "integrityVerified": true,
+      "downloadOnly": true,
+      "lifecycleScriptsExecuted": false,
+      "installedInProduction": false,
+      "adoption": "pending_validation",
+      "packageJsonSha256": "d6bb91d2f0967e0a512debd11c2631bc3828ae9d472dd94d87ab66574ce2b3c4"
+    },
+    {
+      "name": "@sinclair/typebox",
+      "version": "0.34.48",
+      "integrity": "sha512-kKJTNuK3AQOrgjjotVxMrCn1sUJwM76wMszfq1kdU4uYVJjvEWuFQ6HgvLt4Xz3fSmZlTOxJ/Ie13KnIcWQXFA==",
+      "tarball": "https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.34.48.tgz",
+      "integrityVerified": true,
+      "downloadOnly": true,
+      "lifecycleScriptsExecuted": false,
+      "installedInProduction": false,
+      "adoption": "pending_validation"
+    }
+  ],
+  "notes": [
+    "Latest Tokenjuice 2026.10.5 requires host >=2026.10.5; chose exact 2026.10.3 for isolated evaluation, without upgrading host.",
+    "Downloaded artifacts stay outside project. Portable package must fetch these exact versions and verify integrity if candidates are later enabled.",
+    "Tokenjuice OpenClaw extension does not pass storeRaw:true in compactBashResult; raw evidence recovery requires validation or pass-through. This is source-inspection evidence only, not a runtime fidelity result.",
+    "Lossless metadata lists host >=2026.9.2; runtime, summarization accounting and recovery still require tests."
+  ],
+  "isolatedHostLoad": {
+    "hostVersion": "2026.10.3",
+    "tokenjuice": "loaded with middleware registration",
+    "lossless": "loaded with contextEngine registration after TypeBox supplied",
+    "limitations": [
+      "Service activation not exercised",
+      "Candidate lifecycle and actual LLM semantics not verified",
+      "Candidate not selected in production"
+    ]
+  }
+}

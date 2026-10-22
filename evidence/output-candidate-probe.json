@@ -1,0 +1,65 @@
+{
+  "component": "tokenjuice OpenClaw extension",
+  "package": "tokenjuice@0.8.5",
+  "hostPluginPackage": "@openclaw/tokenjuice@2026.10.3",
+  "kind": "actual-component-offline-probe",
+  "providerRequests": 0,
+  "productionChanges": false,
+  "telemetryStats": false,
+  "fullHostRunVerified": false,
+  "fixtures": [
+    {
+      "fixture": "git-inventory",
+      "changed": true,
+      "rawChars": 2278,
+      "resultChars": 305,
+      "requiredFactsPreserved": true,
+      "exitCodePreserved": true,
+      "rawRecoveryReferenceShown": false,
+      "resultDetails": {
+        "compacted": true,
+        "rawChars": 2278,
+        "reducedChars": 269,
+        "savedChars": 2009,
+        "reducer": "git/status"
+      }
+    },
+    {
+      "fixture": "exact-file-read",
+      "changed": false,
+      "rawChars": 2250,
+      "resultChars": 2250,
+      "requiredFactsPreserved": true,
+      "exitCodePreserved": true,
+      "rawRecoveryReferenceShown": false,
+      "resultDetails": null
+    },
+    {
+      "fixture": "test-failure",
+      "changed": true,
+      "rawChars": 2346,
+      "resultChars": 109,
+      "requiredFactsPreserved": true,
+      "exitCodePreserved": true,
+      "rawRecoveryReferenceShown": false,
+      "resultDetails": {
+        "compacted": true,
+        "rawChars": 2346,
+        "reducedChars": 73,
+        "savedChars": 2273,
+        "reducer": "tests/npm-test"
+      }
+    },
+    {
+      "fixture": "javascript-wrapper",
+      "changed": false,
+      "rawChars": 2400,
+      "resultChars": 2400,
+      "requiredFactsPreserved": true,
+      "exitCodePreserved": true,
+      "rawRecoveryReferenceShown": false,
+      "resultDetails": null
+    }
+  ],
+  "adoption": "not enabled: fidelity and recovery require broader contract/host tests"
+}

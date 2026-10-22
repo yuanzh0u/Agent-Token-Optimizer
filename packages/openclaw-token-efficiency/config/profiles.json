@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "defaults": {"mode": "observe"},
+  "profiles": {
+    "interactive": {"features": {"loopGuard": true}},
+    "tool-intensive": {"features": {"loopGuard": true, "outputCompression": true}},
+    "long-history": {"features": {"historyCompaction": true, "pruning": true}},
+    "background-events": {"features": {"loopGuard": true, "requestGate": true}}
+  },
+  "bindings": []
+}

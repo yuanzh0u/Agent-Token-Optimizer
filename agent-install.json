@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "name": "agent-token-optimizer",
+  "version": "0.1.0",
+  "status": "preview",
+  "repository": "https://github.com/yuanzh0u/Agent-Token-Optimizer.git",
+  "ref": "v0.1.0",
+  "node": {
+    "engines": ">=24.16.0 <25 || >=26.1.0",
+    "verifiedVersion": "24.21.0",
+    "verifiedPlatform": "linux"
+  },
+  "prerequisites": [
+    "git",
+    "node",
+    "npm",
+    "tar (used by package verification)"
+  ],
+  "requiresBuild": false,
+  "requiresDependencyInstallFromSource": false,
+  "requiresOpenClawForCLI": false,
+  "npmRegistryPublished": false,
+  "workingDirectoryBase": "the new parent directory chosen by the installing agent",
+  "steps": [
+    {
+      "name": "clone",
+      "command": "git",
+      "args": [
+        "clone",
+        "--depth",
+        "1",
+        "--branch",
+        "v0.1.0",
+        "https://github.com/yuanzh0u/Agent-Token-Optimizer.git"
+      ],
+      "cwd": ".",
+      "expectedExitCode": 0
+    },
+    {
+      "name": "verify",
+      "command": "npm",
+      "args": [
+        "run",
+        "verify"
+      ],
+      "cwd": "Agent-Token-Optimizer",
+      "expectedExitCode": 0,
+      "expectedOutputContains": "Verified offline tests, source lock and fresh package portability."
+    },
+    {
+      "name": "demo",
+      "command": "npm",
+      "args": [
+        "run",
+        "demo"
+      ],
+      "cwd": "Agent-Token-Optimizer",
+      "expectedExitCode": 0,
+      "expectedResult": {
+        "kind": "synthetic-demo",
+        "synthetic": true,
+        "realModelRequests": 0
+      },
+      "reportPathsFromOutput": [
+        "config",
+        "json",
+        "html",
+        "health"
+      ]
+    },
+    {
+      "name": "help",
+      "command": "node",
+      "args": [
+        "bin/agent-token-optimizer.mjs",
+        "--help"
+      ],
+      "cwd": "Agent-Token-Optimizer",
+      "expectedExitCode": 0
+    }
+  ],
+  "cli": {
+    "command": "node",
+    "args": [
+      "bin/agent-token-optimizer.mjs"
+    ],
+    "cwd": "Agent-Token-Optimizer",
+    "exitCodes": {
+      "0": "completed; inspect explicit coverage/degraded state",
+      "1": "invalid input or operation error",
+      "2": "unavailable/stale collection or report; never interpret as zero usage"
+    }
+  },
+  "defaults": {
+    "mode": "observe",
+    "sources": [],
+    "realModelRequests": 0,
+    "hostEnforcement": "unverified"
+  },
+  "nextStepDocumentation": "docs/operations.md",
+  "optionalOpenClaw": {
+    "peerVersion": "2026.10.3",
+    "pluginId": "openclaw-token-governor",
+    "automaticInstallOrEnable": false,
+    "verifiedScope": "isolated import and permission-dependent registration only"
+  },
+  "boundaries": [
+    "Do not change host settings or grant conversation access unless requested.",
+    "Do not configure or inspect sources without authorization.",
+    "Do not treat synthetic metrics as real savings.",
+    "Do not use a similarly named npm registry package as a substitute."
+  ]
+}

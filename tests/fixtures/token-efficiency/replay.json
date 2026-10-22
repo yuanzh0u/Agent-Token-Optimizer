@@ -1,0 +1,117 @@
+{
+  "synthetic": true,
+  "calls": [
+    {
+      "sessionId": "synthetic-session",
+      "runId": "synthetic-run",
+      "tool": "exec",
+      "args": {
+        "command": "fixture-only-do-not-execute"
+      },
+      "progress": {
+        "version": 1,
+        "status": "no-progress"
+      },
+      "sideEffect": true,
+      "timestamp": 0
+    },
+    {
+      "sessionId": "synthetic-session",
+      "runId": "synthetic-run",
+      "tool": "exec",
+      "args": {
+        "command": "fixture-only-do-not-execute"
+      },
+      "progress": {
+        "version": 1,
+        "status": "no-progress"
+      },
+      "sideEffect": true,
+      "timestamp": 1
+    },
+    {
+      "sessionId": "synthetic-session",
+      "runId": "synthetic-run",
+      "tool": "exec",
+      "args": {
+        "command": "fixture-only-do-not-execute"
+      },
+      "progress": {
+        "version": 1,
+        "status": "no-progress"
+      },
+      "sideEffect": true,
+      "timestamp": 2
+    },
+    {
+      "sessionId": "synthetic-session",
+      "runId": "synthetic-run",
+      "tool": "exec",
+      "args": {
+        "command": "fixture-only-do-not-execute"
+      },
+      "progress": {
+        "version": 1,
+        "status": "no-progress"
+      },
+      "sideEffect": true,
+      "timestamp": 3
+    },
+    {
+      "sessionId": "synthetic-session",
+      "runId": "synthetic-run",
+      "tool": "exec",
+      "args": {
+        "command": "fixture-only-do-not-execute"
+      },
+      "progress": {
+        "version": 1,
+        "status": "no-progress"
+      },
+      "sideEffect": true,
+      "timestamp": 4
+    },
+    {
+      "sessionId": "synthetic-session",
+      "runId": "synthetic-run",
+      "tool": "exec",
+      "args": {
+        "command": "fixture-only-do-not-execute"
+      },
+      "progress": {
+        "version": 1,
+        "status": "no-progress"
+      },
+      "sideEffect": true,
+      "timestamp": 5
+    },
+    {
+      "sessionId": "synthetic-session",
+      "runId": "synthetic-run",
+      "tool": "exec",
+      "args": {
+        "command": "fixture-only-do-not-execute"
+      },
+      "progress": {
+        "version": 1,
+        "status": "no-progress"
+      },
+      "sideEffect": true,
+      "timestamp": 6
+    },
+    {
+      "sessionId": "synthetic-session",
+      "runId": "synthetic-run",
+      "tool": "exec",
+      "args": {
+        "command": "fixture-only-do-not-execute"
+      },
+      "progress": {
+        "version": 1,
+        "status": "no-progress"
+      },
+      "sideEffect": true,
+      "timestamp": 7
+    }
+  ]
+}

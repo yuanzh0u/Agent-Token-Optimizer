@@ -1,0 +1,1902 @@
+{
+  "capturedAt": "2026-10-21T17:32:10.068575+08:00",
+  "hostVersion": "2026.10.3",
+  "kind": "actual-host-run-with-local-fake-provider",
+  "test": "T06 constant read-only exec scenario only",
+  "actualProviderModelRequests": 0,
+  "fakeRequestsAreNotSavingsMeasurements": true,
+  "productionConfigChanged": false,
+  "hostPrivateSourceChanged": false,
+  "command": "printf fixture-status-v1",
+  "scenarios": [
+    {
+      "enabled": false,
+      "fakeModelRequests": 100,
+      "processExitCode": 0,
+      "timedOut": false,
+      "toolSummary": {
+        "calls": 99,
+        "tools": [
+          "exec"
+        ],
+        "failures": 0
+      },
+      "observedSuccessfulToolResultIds": 99,
+      "livenessState": "working",
+      "error": null,
+      "loopBlockDiagnosticSeen": false,
+      "requestTrace": [
+        {
+          "number": 1,
+          "toolResultCount": 0,
+          "visibleFixtureResultIds": 0,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 2,
+          "toolResultCount": 1,
+          "visibleFixtureResultIds": 1,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 3,
+          "toolResultCount": 2,
+          "visibleFixtureResultIds": 2,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 4,
+          "toolResultCount": 3,
+          "visibleFixtureResultIds": 3,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 5,
+          "toolResultCount": 4,
+          "visibleFixtureResultIds": 4,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 6,
+          "toolResultCount": 5,
+          "visibleFixtureResultIds": 5,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 7,
+          "toolResultCount": 6,
+          "visibleFixtureResultIds": 6,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 8,
+          "toolResultCount": 7,
+          "visibleFixtureResultIds": 7,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 9,
+          "toolResultCount": 8,
+          "visibleFixtureResultIds": 8,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 10,
+          "toolResultCount": 9,
+          "visibleFixtureResultIds": 9,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 11,
+          "toolResultCount": 10,
+          "visibleFixtureResultIds": 10,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 12,
+          "toolResultCount": 11,
+          "visibleFixtureResultIds": 11,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 13,
+          "toolResultCount": 12,
+          "visibleFixtureResultIds": 12,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 14,
+          "toolResultCount": 13,
+          "visibleFixtureResultIds": 13,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 15,
+          "toolResultCount": 14,
+          "visibleFixtureResultIds": 14,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 16,
+          "toolResultCount": 15,
+          "visibleFixtureResultIds": 15,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 17,
+          "toolResultCount": 16,
+          "visibleFixtureResultIds": 16,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 18,
+          "toolResultCount": 17,
+          "visibleFixtureResultIds": 17,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 19,
+          "toolResultCount": 18,
+          "visibleFixtureResultIds": 18,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 20,
+          "toolResultCount": 19,
+          "visibleFixtureResultIds": 19,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 21,
+          "toolResultCount": 20,
+          "visibleFixtureResultIds": 20,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 22,
+          "toolResultCount": 21,
+          "visibleFixtureResultIds": 21,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 23,
+          "toolResultCount": 22,
+          "visibleFixtureResultIds": 22,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 24,
+          "toolResultCount": 23,
+          "visibleFixtureResultIds": 23,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 25,
+          "toolResultCount": 24,
+          "visibleFixtureResultIds": 24,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 26,
+          "toolResultCount": 25,
+          "visibleFixtureResultIds": 25,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 27,
+          "toolResultCount": 26,
+          "visibleFixtureResultIds": 26,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 28,
+          "toolResultCount": 27,
+          "visibleFixtureResultIds": 27,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 29,
+          "toolResultCount": 28,
+          "visibleFixtureResultIds": 28,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 30,
+          "toolResultCount": 29,
+          "visibleFixtureResultIds": 29,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 31,
+          "toolResultCount": 30,
+          "visibleFixtureResultIds": 30,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 32,
+          "toolResultCount": 31,
+          "visibleFixtureResultIds": 31,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 33,
+          "toolResultCount": 32,
+          "visibleFixtureResultIds": 32,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 34,
+          "toolResultCount": 33,
+          "visibleFixtureResultIds": 33,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 35,
+          "toolResultCount": 34,
+          "visibleFixtureResultIds": 34,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 36,
+          "toolResultCount": 35,
+          "visibleFixtureResultIds": 35,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 37,
+          "toolResultCount": 36,
+          "visibleFixtureResultIds": 36,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 38,
+          "toolResultCount": 37,
+          "visibleFixtureResultIds": 37,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 39,
+          "toolResultCount": 38,
+          "visibleFixtureResultIds": 38,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 40,
+          "toolResultCount": 39,
+          "visibleFixtureResultIds": 39,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 41,
+          "toolResultCount": 40,
+          "visibleFixtureResultIds": 40,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 42,
+          "toolResultCount": 41,
+          "visibleFixtureResultIds": 41,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 43,
+          "toolResultCount": 42,
+          "visibleFixtureResultIds": 42,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 44,
+          "toolResultCount": 43,
+          "visibleFixtureResultIds": 43,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 45,
+          "toolResultCount": 44,
+          "visibleFixtureResultIds": 44,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 46,
+          "toolResultCount": 45,
+          "visibleFixtureResultIds": 45,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 47,
+          "toolResultCount": 46,
+          "visibleFixtureResultIds": 46,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 48,
+          "toolResultCount": 47,
+          "visibleFixtureResultIds": 47,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 49,
+          "toolResultCount": 48,
+          "visibleFixtureResultIds": 48,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 50,
+          "toolResultCount": 49,
+          "visibleFixtureResultIds": 49,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 51,
+          "toolResultCount": 50,
+          "visibleFixtureResultIds": 50,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 52,
+          "toolResultCount": 51,
+          "visibleFixtureResultIds": 51,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 53,
+          "toolResultCount": 52,
+          "visibleFixtureResultIds": 52,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 54,
+          "toolResultCount": 53,
+          "visibleFixtureResultIds": 53,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 55,
+          "toolResultCount": 54,
+          "visibleFixtureResultIds": 54,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 56,
+          "toolResultCount": 55,
+          "visibleFixtureResultIds": 55,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 57,
+          "toolResultCount": 56,
+          "visibleFixtureResultIds": 56,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 58,
+          "toolResultCount": 57,
+          "visibleFixtureResultIds": 57,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 59,
+          "toolResultCount": 58,
+          "visibleFixtureResultIds": 58,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 60,
+          "toolResultCount": 59,
+          "visibleFixtureResultIds": 59,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 61,
+          "toolResultCount": 60,
+          "visibleFixtureResultIds": 60,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 62,
+          "toolResultCount": 61,
+          "visibleFixtureResultIds": 61,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 63,
+          "toolResultCount": 62,
+          "visibleFixtureResultIds": 62,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 64,
+          "toolResultCount": 63,
+          "visibleFixtureResultIds": 63,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 65,
+          "toolResultCount": 64,
+          "visibleFixtureResultIds": 64,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 66,
+          "toolResultCount": 65,
+          "visibleFixtureResultIds": 65,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 67,
+          "toolResultCount": 66,
+          "visibleFixtureResultIds": 66,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 68,
+          "toolResultCount": 67,
+          "visibleFixtureResultIds": 67,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 69,
+          "toolResultCount": 68,
+          "visibleFixtureResultIds": 68,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 70,
+          "toolResultCount": 69,
+          "visibleFixtureResultIds": 69,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 71,
+          "toolResultCount": 70,
+          "visibleFixtureResultIds": 70,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 72,
+          "toolResultCount": 71,
+          "visibleFixtureResultIds": 71,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 73,
+          "toolResultCount": 72,
+          "visibleFixtureResultIds": 72,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 74,
+          "toolResultCount": 73,
+          "visibleFixtureResultIds": 73,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 75,
+          "toolResultCount": 74,
+          "visibleFixtureResultIds": 74,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 76,
+          "toolResultCount": 75,
+          "visibleFixtureResultIds": 75,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 77,
+          "toolResultCount": 76,
+          "visibleFixtureResultIds": 76,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 78,
+          "toolResultCount": 77,
+          "visibleFixtureResultIds": 77,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 79,
+          "toolResultCount": 78,
+          "visibleFixtureResultIds": 78,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 80,
+          "toolResultCount": 79,
+          "visibleFixtureResultIds": 79,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 81,
+          "toolResultCount": 80,
+          "visibleFixtureResultIds": 80,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 82,
+          "toolResultCount": 81,
+          "visibleFixtureResultIds": 81,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 83,
+          "toolResultCount": 82,
+          "visibleFixtureResultIds": 82,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 84,
+          "toolResultCount": 83,
+          "visibleFixtureResultIds": 83,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 85,
+          "toolResultCount": 84,
+          "visibleFixtureResultIds": 84,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 86,
+          "toolResultCount": 85,
+          "visibleFixtureResultIds": 85,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 87,
+          "toolResultCount": 86,
+          "visibleFixtureResultIds": 86,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 88,
+          "toolResultCount": 87,
+          "visibleFixtureResultIds": 87,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 89,
+          "toolResultCount": 88,
+          "visibleFixtureResultIds": 88,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 90,
+          "toolResultCount": 89,
+          "visibleFixtureResultIds": 89,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 91,
+          "toolResultCount": 90,
+          "visibleFixtureResultIds": 90,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 92,
+          "toolResultCount": 91,
+          "visibleFixtureResultIds": 91,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 93,
+          "toolResultCount": 92,
+          "visibleFixtureResultIds": 92,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 94,
+          "toolResultCount": 93,
+          "visibleFixtureResultIds": 93,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 95,
+          "toolResultCount": 94,
+          "visibleFixtureResultIds": 94,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 96,
+          "toolResultCount": 95,
+          "visibleFixtureResultIds": 95,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 97,
+          "toolResultCount": 96,
+          "visibleFixtureResultIds": 96,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 98,
+          "toolResultCount": 97,
+          "visibleFixtureResultIds": 97,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 99,
+          "toolResultCount": 98,
+          "visibleFixtureResultIds": 98,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 100,
+          "toolResultCount": 99,
+          "visibleFixtureResultIds": 99,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        }
+      ],
+      "stdoutSha256": "33b6e2d48ef0c350f48e174670807cf3df09d59e97455d5a2cd3c5e7836c55bd"
+    },
+    {
+      "enabled": true,
+      "fakeModelRequests": 22,
+      "processExitCode": 1,
+      "timedOut": false,
+      "toolSummary": {
+        "calls": 22,
+        "tools": [
+          "exec"
+        ],
+        "failures": 2,
+        "unresolvedError": {
+          "toolName": "exec"
+        }
+      },
+      "observedSuccessfulToolResultIds": 20,
+      "livenessState": "abandoned",
+      "error": {
+        "kind": "incomplete_turn",
+        "message": "OpenClaw stopped this run because tool-loop recovery encountered another critical loop. No blocked tool action was executed.",
+        "fallbackSafe": false,
+        "terminalPresentation": false
+      },
+      "loopBlockDiagnosticSeen": true,
+      "requestTrace": [
+        {
+          "number": 1,
+          "toolResultCount": 0,
+          "visibleFixtureResultIds": 0,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 2,
+          "toolResultCount": 1,
+          "visibleFixtureResultIds": 1,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 3,
+          "toolResultCount": 2,
+          "visibleFixtureResultIds": 2,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 4,
+          "toolResultCount": 3,
+          "visibleFixtureResultIds": 3,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 5,
+          "toolResultCount": 4,
+          "visibleFixtureResultIds": 4,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 6,
+          "toolResultCount": 5,
+          "visibleFixtureResultIds": 5,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 7,
+          "toolResultCount": 6,
+          "visibleFixtureResultIds": 6,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 8,
+          "toolResultCount": 7,
+          "visibleFixtureResultIds": 7,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 9,
+          "toolResultCount": 8,
+          "visibleFixtureResultIds": 8,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 10,
+          "toolResultCount": 9,
+          "visibleFixtureResultIds": 9,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 11,
+          "toolResultCount": 10,
+          "visibleFixtureResultIds": 10,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 12,
+          "toolResultCount": 11,
+          "visibleFixtureResultIds": 11,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 13,
+          "toolResultCount": 12,
+          "visibleFixtureResultIds": 12,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 14,
+          "toolResultCount": 13,
+          "visibleFixtureResultIds": 13,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 15,
+          "toolResultCount": 14,
+          "visibleFixtureResultIds": 14,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 16,
+          "toolResultCount": 15,
+          "visibleFixtureResultIds": 15,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 17,
+          "toolResultCount": 16,
+          "visibleFixtureResultIds": 16,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 18,
+          "toolResultCount": 17,
+          "visibleFixtureResultIds": 17,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 19,
+          "toolResultCount": 18,
+          "visibleFixtureResultIds": 18,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 20,
+          "toolResultCount": 19,
+          "visibleFixtureResultIds": 19,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 21,
+          "toolResultCount": 20,
+          "visibleFixtureResultIds": 20,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        },
+        {
+          "number": 22,
+          "toolResultCount": 21,
+          "visibleFixtureResultIds": 20,
+          "offeredTools": [
+            "exec",
+            "tool_call",
+            "tool_describe",
+            "tool_search"
+          ],
+          "loopMarkerClasses": [
+            "recovery-or-finalization",
+            "blocked-or-stop"
+          ]
+        }
+      ],
+      "stdoutSha256": "5aaf402f0321d56ee0052f1d793e5064167adf5a31c0e15bcfa04fad9e1a475b"
+    }
+  ],
+  "limitations": [
+    "This establishes one native read-only repeated-exec route only; T07/T08/T09 other patterns remain partial.",
+    "Synthetic model usage is not provider usage or a measured token savings rate.",
+    "The enabled group intentionally ends with incomplete_turn after recovery repeats the blocked tool; termination, not answer success, is the assertion.",
+    "Host stderr contains SQLite reclamation cleanup warning; clean-close receipt is written, but full clean shutdown/recovery coverage is pending."
+  ],
+  "probeScriptSha256": "cd9fa598ee48c6be2e1889e62f3f83b6e9741b5474c34e072a41fd4509c31e42",
+  "archivedProbeSource": "Private historical probe source omitted from public distribution; probeScriptSha256 identifies the original artifact.",
+  "publicationRedactions": [
+    "Local home paths redacted and private archival references omitted; measurement values are unchanged."
+  ]
+}

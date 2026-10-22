@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-22",
+  "checks": {
+    "privateArtifactsAbsent": true,
+    "privateStringsAbsent": true,
+    "secretPatternsAbsent": true,
+    "relativeMarkdownLinksValid": true,
+    "runtimeFilesUnchanged": true,
+    "installContractMatchesPackage": true
+  },
+  "privateStringFiles": [],
+  "secretPatternFiles": [],
+  "brokenLinks": [],
+  "runtimeChangedFiles": [],
+  "realModelRequests": 0,
+  "historicalEvidenceNotPromoted": true
+}

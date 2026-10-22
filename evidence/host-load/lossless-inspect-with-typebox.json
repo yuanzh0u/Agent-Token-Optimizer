@@ -1,0 +1,938 @@
+{
+  "workspaceDir": "/tmp/ato-host-probe-ss90upjr/workspace",
+  "plugin": {
+    "id": "lossless-claw",
+    "name": "Lossless Context Management",
+    "description": "DAG-based conversation summarization with threshold compaction, full-text search, and sub-agent expansion",
+    "packageVersion": "1.2.0",
+    "version": "1.2.0",
+    "builtWithOpenClawVersion": "2026.9.4",
+    "packageName": "@martian-engineering/lossless-claw",
+    "format": "openclaw",
+    "source": "/tmp/ato-candidates/lossless/package/dist/index.js",
+    "rootDir": "/tmp/ato-candidates/lossless/package",
+    "origin": "config",
+    "workspaceDir": "/tmp/ato-host-probe-ss90upjr/workspace",
+    "trust": {
+      "reason": "record-missing",
+      "registryPath": "/tmp/ato-host-probe-ss90upjr/lossless/state/openclaw.sqlite",
+      "origin": "config"
+    },
+    "enabled": true,
+    "compat": [],
+    "explicitlyEnabled": true,
+    "activated": true,
+    "activationSource": "explicit",
+    "activationReason": "enabled in config",
+    "syntheticAuthRefs": [],
+    "status": "loaded",
+    "toolNames": [
+      "lcm_grep",
+      "lcm_describe",
+      "lcm_expand",
+      "lcm_expand_query"
+    ],
+    "hookNames": [],
+    "channelIds": [],
+    "cliBackendIds": [],
+    "providerIds": [],
+    "embeddingProviderIds": [],
+    "speechProviderIds": [],
+    "realtimeTranscriptionProviderIds": [],
+    "realtimeVoiceProviderIds": [],
+    "mediaUnderstandingProviderIds": [],
+    "transcriptSourceProviderIds": [],
+    "imageGenerationProviderIds": [],
+    "videoGenerationProviderIds": [],
+    "musicGenerationProviderIds": [],
+    "webFetchProviderIds": [],
+    "webSearchProviderIds": [],
+    "migrationProviderIds": [],
+    "contextEngineIds": [
+      "lossless-claw"
+    ],
+    "agentHarnessIds": [],
+    "cliCommands": [],
+    "services": [],
+    "gatewayDiscoveryServiceIds": [],
+    "commands": [
+      "lcm"
+    ],
+    "httpRoutes": 0,
+    "hookCount": 4,
+    "configSchema": true,
+    "configUiHints": {
+      "enabled": {
+        "label": "Enabled",
+        "help": "Enable or disable lossless-claw without uninstalling it"
+      },
+      "hostFallbackMode": {
+        "label": "Host Fallback Mode",
+        "help": "Controls the installation-wide agent-run host requirement. error (default) requires the full lifecycle and fails closed on CLI hosts. capture-only accepts bootstrap/after-turn/maintain so generic CLI runs keep transcript capture and recall without Lossless prompt assembly or host-triggered Lossless compaction. Backend-native compaction remains host-owned. Fully capable native hosts still run the full lifecycle. Subagent projection requirements are unchanged."
+      },
+      "contextThreshold": {
+        "label": "Context Threshold",
+        "help": "Fraction of context window that triggers compaction (0.0–1.0)"
+      },
+      "contextThresholdOverrides": {
+        "label": "Context Threshold Overrides",
+        "help": "Optional ordered rules that override contextThreshold, freshTailCount, and leafChunkTokens by model, model context-window range, or session glob pattern"
+      },
+      "sweepMaxDepth": {
+        "label": "Sweep Max Depth",
+        "help": "Preferred maximum condensation source depth during routine full sweeps (0 = leaf only, -1 = unlimited). Pressure sweeps may go deeper when summarized context remains above target."
+      },
+      "incrementalMaxDepth": {
+        "label": "Incremental Max Depth (Deprecated)",
+        "help": "Deprecated alias for sweepMaxDepth. Kept for existing configs."
+      },
+      "freshTailCount": {
+        "label": "Fresh Tail Count",
+        "help": "Number of recent messages protected from compaction; forced overflow recovery can summarize older complete tool groups while retaining their initiating user"
+      },
+      "freshTailMaxTokens": {
+        "label": "Fresh Tail Max Tokens",
+        "help": "Optional token cap for the protected fresh tail; routine compaction preserves the newest user-led suffix, while forced overflow recovery may summarize older complete tool groups"
+      },
+      "promptAwareEviction": {
+        "label": "Prompt-Aware Eviction",
+        "help": "When enabled, budget-constrained assembly keeps older context by prompt relevance instead of pure chronology. This can improve recall under tight budgets, but it can also reduce provider prompt-cache hit rates because the preserved prefix changes as prompts change."
+      },
+      "stubLargeToolPayloads": {
+        "label": "Stub Large Tool Payloads",
+        "help": "When enabled, evictable tool-result rows whose payload was externalized via lcm-blob-migrate are replaced with a [LCM Tool Output: file_xxx | …] reference at assemble time. Fresh tail is never stubbed. The agent recovers the original output via lcm_describe(id=file_xxx, expandFile=true). Default off; requires running scripts/lcm-blob-migrate.mjs first to populate messages.large_content."
+      },
+      "leafChunkTokens": {
+        "label": "Leaf Chunk Tokens",
+        "help": "Maximum source tokens per leaf compaction chunk before summarization (default 20000)"
+      },
+      "summaryPrefixTargetTokens": {
+        "label": "Summary Prefix Target Tokens",
+        "help": "Optional target for summarized-prefix tokens after a full sweep. When omitted, Lossless derives a pressure target from contextThreshold and leafChunkTokens."
+      },
+      "maxSweepIterations": {
+        "label": "Max Sweep Iterations",
+        "help": "Hard cap on summarizer passes within a single full compaction sweep (default 12). Bounds how long a sweep can run on the turn-critical path; on hitting the cap the sweep stops cleanly with a partial result."
+      },
+      "sweepDeadlineMs": {
+        "label": "Sweep Deadline (ms)",
+        "help": "Wall-clock budget for a single full compaction sweep, in milliseconds (default 120000). When exceeded the sweep stops before starting another pass, so a slow or rate-limited summarizer cannot hang the agent turn."
+      },
+      "compactUntilUnderDeadlineMs": {
+        "label": "Compact-Until-Under Deadline (ms)",
+        "help": "Wall-clock budget for a whole compact-until-under operation, in milliseconds (default 300000). A compact-until-under run executes several sweeps; this caps the total so it cannot run maxRounds times the per-sweep deadline (~20 minutes at defaults)."
+      },
+      "bootstrapMaxTokens": {
+        "label": "Bootstrap Max Tokens",
+        "help": "Maximum raw parent-history tokens imported into a brand-new conversation bootstrap; oldest turns are dropped first. Automatic: the greater of 6000 or 30% of Leaf Chunk Tokens, rounded down.",
+        "placeholder": "Auto (at least 6000)"
+      },
+      "newSessionRetainDepth": {
+        "label": "New Session Retain Depth",
+        "help": "Context retained after /new (-1 keeps all context, 2 keeps d2+)"
+      },
+      "leafTargetTokens": {
+        "label": "Leaf Target Tokens",
+        "help": "Target token count for leaf summaries"
+      },
+      "condensedTargetTokens": {
+        "label": "Condensed Target Tokens",
+        "help": "Target token count for condensed summaries"
+      },
+      "maxExpandTokens": {
+        "label": "Max Expand Tokens",
+        "help": "Token cap for lcm_expand_query expansion calls"
+      },
+      "leafMinFanout": {
+        "label": "Leaf Min Fanout",
+        "help": "Minimum number of raw messages required before a leaf compaction pass runs"
+      },
+      "condensedMinFanout": {
+        "label": "Condensed Min Fanout",
+        "help": "Number of same-depth summaries required before condensation is attempted"
+      },
+      "condensedMinFanoutHard": {
+        "label": "Condensed Min Fanout Hard",
+        "help": "Hard floor for condensation grouping during maintenance and repair flows"
+      },
+      "dbPath": {
+        "label": "Database Path",
+        "help": "Path to LCM SQLite database (default: <OPENCLAW_STATE_DIR>/lcm.db; falls back to ~/.openclaw/lcm.db)"
+      },
+      "databasePath": {
+        "label": "Database Path",
+        "help": "Path to LCM SQLite database (preferred key; alias of dbPath, default: <OPENCLAW_STATE_DIR>/lcm.db)"
+      },
+      "largeFilesDir": {
+        "label": "Large Files Directory",
+        "help": "Directory for persisting externalized large-file text and inline-image payloads (default: <OPENCLAW_STATE_DIR>/lcm-files)"
+      },
+      "ignoreSessionPatterns": {
+        "label": "Ignored Sessions",
+        "help": "Glob patterns for session keys to exclude from LCM storage"
+      },
+      "statelessSessionPatterns": {
+        "label": "Stateless Sessions",
+        "help": "Glob patterns for session keys that can read from LCM but never write to it"
+      },
+      "skipStatelessSessions": {
+        "label": "Skip Stateless Sessions",
+        "help": "When enabled, matching stateless session keys skip LCM persistence and grant writes"
+      },
+      "largeFileThresholdTokens": {
+        "label": "Large File Threshold Tokens",
+        "help": "Token threshold that routes text attachments into large-file summarization"
+      },
+      "largeFileTokenThreshold": {
+        "label": "Large File Threshold Tokens",
+        "help": "Legacy alias of largeFileThresholdTokens"
+      },
+      "summaryModel": {
+        "label": "Summary Model",
+        "help": "Runtime LLM model override for LCM summarization (e.g., 'gpt-5.4' with summaryProvider, or 'openai-resp/gpt-5.4'); explicit overrides require plugins.entries.lossless-claw.llm policy"
+      },
+      "summaryProvider": {
+        "label": "Summary Provider",
+        "help": "Provider override used only when summaryModel is a bare model name (e.g., 'openai-resp')"
+      },
+      "largeFileSummaryModel": {
+        "label": "Large File Summary Model",
+        "help": "Runtime LLM model override for large-file summarization; explicit overrides require plugins.entries.lossless-claw.llm policy"
+      },
+      "largeFileSummaryProvider": {
+        "label": "Large File Summary Provider",
+        "help": "Provider override for large-file summarization"
+      },
+      "expansionModel": {
+        "label": "Expansion Model",
+        "help": "Model override for lcm_expand_query sub-agent (e.g., 'anthropic/claude-haiku-4-5')"
+      },
+      "expansionProvider": {
+        "label": "Expansion Provider",
+        "help": "Provider override for lcm_expand_query sub-agent (e.g., 'anthropic')"
+      },
+      "delegationTimeoutMs": {
+        "label": "Delegation Timeout (ms)",
+        "help": "Wall-clock budget shared by delegated work in one lcm_expand_query call; the tool keeps 30 seconds of RPC headroom for cancellation and cleanup"
+      },
+      "summaryTimeoutMs": {
+        "label": "Summary Timeout (ms)",
+        "help": "Maximum time to wait for a single model-backed LCM summarizer call before timing out"
+      },
+      "summaryCallWindowMs": {
+        "label": "Summary Call Window (ms)",
+        "help": "Rolling window used by the summarization spend guard"
+      },
+      "summaryMaxCallsPerWindow": {
+        "label": "Summary Max Calls Per Window",
+        "help": "Maximum model-backed summarization calls per session/window before Lossless opens a non-auth spend backoff"
+      },
+      "summarySpendBackoffMs": {
+        "label": "Summary Spend Backoff (ms)",
+        "help": "Cooldown after the summarization spend guard opens"
+      },
+      "maxAssemblyTokenBudget": {
+        "label": "Max Assembly Token Budget",
+        "help": "Hard ceiling for assembly token budget — caps runtime-provided and fallback budgets. Set for smaller context-window models (e.g., 30000 for 32k models)"
+      },
+      "summaryMaxOverageFactor": {
+        "label": "Summary Max Overage Factor",
+        "help": "Maximum allowed overage factor for summaries relative to target tokens (default 3). Summaries exceeding this are deterministically truncated."
+      },
+      "fallbackMaxTokens": {
+        "label": "Fallback Max Tokens",
+        "help": "Maximum token budget for deterministic fallback summaries when the LLM summarizer fails (default 512, minimum 64)"
+      },
+      "customInstructions": {
+        "label": "Custom Instructions",
+        "help": "Natural language instructions injected into all summarization prompts (e.g., formatting rules, tone control)"
+      },
+      "circuitBreakerThreshold": {
+        "label": "Circuit Breaker Threshold",
+        "help": "Consecutive auth failures before the summarization circuit breaker trips"
+      },
+      "circuitBreakerCooldownMs": {
+        "label": "Circuit Breaker Cooldown (ms)",
+        "help": "Cooldown before the summarization circuit breaker auto-resets"
+      },
+      "replayFloodThresholdExternal": {
+        "label": "Replay Flood Threshold (External)",
+        "help": "Max replay-like messages allowed in a single SQLite-second for third-party roles (role=user) before the anti-replay guard refuses the batch. Defaults to 3 to preserve replay defense for third-partyly-rebroadcastable input."
+      },
+      "replayFloodThresholdInternal": {
+        "label": "Replay Flood Threshold (Internal)",
+        "help": "Max identical messages allowed in a single SQLite-second for internal roles (role=tool/assistant/system) before the anti-replay guard refuses the batch. Defaults to 32 to absorb legitimate idempotent sub-agent bursts."
+      },
+      "cacheAwareCompaction.enabled": {
+        "label": "Cache-Aware Compaction (Deprecated)",
+        "help": "Deprecated compatibility setting. Automatic compaction is now threshold-only and does not use prompt-cache hot/cold state."
+      },
+      "cacheAwareCompaction.cacheTTLSeconds": {
+        "label": "Short Cache TTL (Deprecated)",
+        "help": "Deprecated compatibility setting. Threshold debt no longer waits for cache TTL."
+      },
+      "cacheAwareCompaction.maxColdCacheCatchupPasses": {
+        "label": "Cold Cache Catch-Up (Deprecated)",
+        "help": "Deprecated compatibility setting. Automatic cold-cache catch-up passes were removed."
+      },
+      "cacheAwareCompaction.hotCachePressureFactor": {
+        "label": "Hot Cache Pressure (Deprecated)",
+        "help": "Deprecated compatibility setting. Hot-cache raw-history pressure no longer drives automatic compaction."
+      },
+      "cacheAwareCompaction.hotCacheBudgetHeadroomRatio": {
+        "label": "Hot Cache Headroom (Deprecated)",
+        "help": "Deprecated compatibility setting. Hot-cache budget headroom no longer defers threshold compaction."
+      },
+      "cacheAwareCompaction.coldCacheObservationThreshold": {
+        "label": "Cold Cache Observations (Deprecated)",
+        "help": "Deprecated compatibility setting. Cold-cache streaks are diagnostic only."
+      },
+      "cacheAwareCompaction.criticalBudgetPressureRatio": {
+        "label": "Critical Budget Pressure (Deprecated)",
+        "help": "Deprecated compatibility setting. contextThreshold is now the only automatic compaction threshold."
+      },
+      "dynamicLeafChunkTokens.enabled": {
+        "label": "Dynamic Leaf Chunks (Deprecated)",
+        "help": "Deprecated compatibility setting. Automatic compaction now uses leafChunkTokens directly."
+      },
+      "dynamicLeafChunkTokens.max": {
+        "label": "Dynamic Leaf Chunk Max (Deprecated)",
+        "help": "Deprecated compatibility setting. Automatic compaction now uses leafChunkTokens directly.",
+        "placeholder": "Auto (2 × Leaf Chunk Tokens)"
+      },
+      "timezone": {
+        "label": "Timezone",
+        "help": "IANA timezone used for summary timestamps"
+      },
+      "pruneHeartbeatOk": {
+        "label": "Prune HEARTBEAT_OK",
+        "help": "Retroactively delete HEARTBEAT_OK turn cycles from LCM storage"
+      },
+      "preserveHeartbeatPoll": {
+        "label": "Preserve Heartbeat Poll",
+        "help": "Keep OpenClaw heartbeat poll system events in LCM storage and assembled context. Default off. With pruneHeartbeatOk enabled, remove only pure HEARTBEAT_OK acknowledgements and preserve the poll and intermediate messages."
+      },
+      "transcriptGcEnabled": {
+        "label": "Transcript GC (Retired)",
+        "help": "Accepted for upgrade compatibility and ignored. OpenClaw owns active transcript storage in Lossless Claw 1.x."
+      },
+      "autoRotateSessionFiles.enabled": {
+        "label": "Auto-Rotate Session Files (Retired)",
+        "help": "Accepted for upgrade compatibility and ignored. OpenClaw owns active session-file rotation in Lossless Claw 1.x."
+      },
+      "autoRotateSessionFiles.createBackups": {
+        "label": "Auto-Rotate Backups (Retired)",
+        "help": "Accepted for upgrade compatibility and ignored."
+      },
+      "autoRotateSessionFiles.sizeBytes": {
+        "label": "Auto-Rotate Size Bytes (Retired)",
+        "help": "Accepted for upgrade compatibility and ignored."
+      },
+      "autoRotateSessionFiles.startup": {
+        "label": "Startup Auto-Rotate (Retired)",
+        "help": "Accepted for upgrade compatibility and ignored."
+      },
+      "autoRotateSessionFiles.runtime": {
+        "label": "Runtime Auto-Rotate (Retired)",
+        "help": "Accepted for upgrade compatibility and ignored."
+      },
+      "enableSummaryThinking": {
+        "label": "Enable Summary Thinking",
+        "help": "Request low reasoning budget from the model during summarization calls"
+      },
+      "proactiveThresholdCompactionMode": {
+        "label": "Proactive Threshold Compaction Mode",
+        "help": "Choose deferred compaction debt by default or keep legacy inline proactive compaction"
+      },
+      "independentLogFile.enabled": {
+        "label": "Independent Log File",
+        "help": "Write lossless-claw JSONL logs to a plugin-owned file in addition to OpenClaw's runtime logger"
+      },
+      "independentLogFile.file": {
+        "label": "Independent Log Path",
+        "help": "Optional lossless-claw log path; defaults to /tmp/openclaw/lossless-claw-YYYY-MM-DD.log with daily rollover"
+      },
+      "independentLogFile.maxFileBytes": {
+        "label": "Independent Log Max Bytes",
+        "help": "Byte threshold for size rotation of the current lossless-claw log file (default: 104857600)"
+      },
+      "fallbackProviders": {
+        "label": "Fallback Providers",
+        "help": "Explicit runtime LLM fallback provider/model pairs for compaction summarization; entries require plugins.entries.lossless-claw.llm policy"
+      },
+      "stripInjectedContextTags": {
+        "label": "Strip Injected Context Tags",
+        "help": "XML tag names whose blocks are stripped from messages before summarization. Covers memory/context plugin prepended blocks (active-memory, memory-lancedb, hindsight-openclaw). Set to [] to disable."
+      }
+    },
+    "configJsonSchema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true
+        },
+        "hostFallbackMode": {
+          "type": "string",
+          "enum": [
+            "error",
+            "capture-only"
+          ],
+          "default": "error"
+        },
+        "contextThreshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.75
+        },
+        "contextThresholdOverrides": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "match",
+              "contextThreshold"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "match": {
+                "type": "object",
+                "additionalProperties": false,
+                "minProperties": 1,
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "modelContextWindowMin": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "modelContextWindowMax": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "sessionPattern": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "contextThreshold": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "freshTailCount": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "leafChunkTokens": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          },
+          "default": []
+        },
+        "sweepMaxDepth": {
+          "type": "integer",
+          "minimum": -1
+        },
+        "incrementalMaxDepth": {
+          "type": "integer",
+          "minimum": -1
+        },
+        "freshTailCount": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 64
+        },
+        "freshTailMaxTokens": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "promptAwareEviction": {
+          "type": "boolean",
+          "default": false
+        },
+        "stubLargeToolPayloads": {
+          "type": "boolean",
+          "default": false
+        },
+        "leafChunkTokens": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 20000
+        },
+        "summaryPrefixTargetTokens": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "maxSweepIterations": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 12
+        },
+        "sweepDeadlineMs": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 120000
+        },
+        "compactUntilUnderDeadlineMs": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 300000
+        },
+        "bootstrapMaxTokens": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "newSessionRetainDepth": {
+          "type": "integer",
+          "minimum": -1,
+          "default": 2
+        },
+        "leafTargetTokens": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 2400
+        },
+        "condensedTargetTokens": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 2000
+        },
+        "maxExpandTokens": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 4000
+        },
+        "leafMinFanout": {
+          "type": "integer",
+          "minimum": 2,
+          "default": 8
+        },
+        "condensedMinFanout": {
+          "type": "integer",
+          "minimum": 2,
+          "default": 4
+        },
+        "condensedMinFanoutHard": {
+          "type": "integer",
+          "minimum": 2,
+          "default": 2
+        },
+        "dbPath": {
+          "type": "string"
+        },
+        "ignoreSessionPatterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "statelessSessionPatterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "skipStatelessSessions": {
+          "type": "boolean",
+          "default": true
+        },
+        "largeFileThresholdTokens": {
+          "type": "integer",
+          "minimum": 1000
+        },
+        "largeFileTokenThreshold": {
+          "type": "integer",
+          "minimum": 1000,
+          "default": 25000
+        },
+        "summaryModel": {
+          "type": "string"
+        },
+        "summaryProvider": {
+          "type": "string"
+        },
+        "largeFileSummaryModel": {
+          "type": "string"
+        },
+        "largeFileSummaryProvider": {
+          "type": "string"
+        },
+        "expansionModel": {
+          "type": "string"
+        },
+        "expansionProvider": {
+          "type": "string"
+        },
+        "delegationTimeoutMs": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 120000
+        },
+        "summaryTimeoutMs": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 60000
+        },
+        "summaryCallWindowMs": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 600000
+        },
+        "summaryMaxCallsPerWindow": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 24
+        },
+        "summarySpendBackoffMs": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1800000
+        },
+        "maxAssemblyTokenBudget": {
+          "type": "integer",
+          "minimum": 1000
+        },
+        "summaryMaxOverageFactor": {
+          "type": "number",
+          "minimum": 1,
+          "default": 3
+        },
+        "fallbackMaxTokens": {
+          "type": "integer",
+          "minimum": 64,
+          "default": 512
+        },
+        "customInstructions": {
+          "type": "string"
+        },
+        "circuitBreakerThreshold": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 5
+        },
+        "circuitBreakerCooldownMs": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1800000
+        },
+        "replayFloodThresholdExternal": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 3
+        },
+        "replayFloodThresholdInternal": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 32
+        },
+        "cacheAwareCompaction": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": true
+            },
+            "cacheTTLSeconds": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 300
+            },
+            "maxColdCacheCatchupPasses": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 2
+            },
+            "hotCachePressureFactor": {
+              "type": "number",
+              "minimum": 1,
+              "default": 4
+            },
+            "hotCacheBudgetHeadroomRatio": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 0.95,
+              "default": 0.2
+            },
+            "coldCacheObservationThreshold": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 3
+            },
+            "criticalBudgetPressureRatio": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "default": 0.9
+            }
+          }
+        },
+        "dynamicLeafChunkTokens": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": true
+            },
+            "max": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "pruneHeartbeatOk": {
+          "type": "boolean",
+          "default": false
+        },
+        "preserveHeartbeatPoll": {
+          "type": "boolean",
+          "default": false
+        },
+        "transcriptGcEnabled": {
+          "description": "Retired compatibility setting. Lossless Claw 1.x accepts and ignores this value.",
+          "type": "boolean"
+        },
+        "autoRotateSessionFiles": {
+          "description": "Retired compatibility setting. Lossless Claw 1.x accepts and ignores these values.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "createBackups": {
+              "type": "boolean"
+            },
+            "sizeBytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "startup": {
+              "type": "string",
+              "enum": [
+                "rotate",
+                "warn",
+                "off"
+              ]
+            },
+            "runtime": {
+              "type": "string",
+              "enum": [
+                "rotate",
+                "warn",
+                "off"
+              ]
+            }
+          }
+        },
+        "enableSummaryThinking": {
+          "type": "boolean",
+          "default": true
+        },
+        "proactiveThresholdCompactionMode": {
+          "type": "string",
+          "enum": [
+            "deferred",
+            "inline"
+          ],
+          "default": "deferred"
+        },
+        "independentLogFile": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": true
+            },
+            "file": {
+              "type": "string"
+            },
+            "maxFileBytes": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 104857600
+            }
+          }
+        },
+        "databasePath": {
+          "description": "Path to LCM SQLite database (preferred key; alias of dbPath, default: <OPENCLAW_STATE_DIR>/lcm.db)",
+          "type": "string"
+        },
+        "largeFilesDir": {
+          "description": "Directory for persisting externalized large-file text and inline-image payloads (default: <OPENCLAW_STATE_DIR>/lcm-files)",
+          "type": "string"
+        },
+        "fallbackProviders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "provider": {
+                "type": "string"
+              },
+              "model": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "provider",
+              "model"
+            ],
+            "additionalProperties": false
+          },
+          "default": []
+        },
+        "stripInjectedContextTags": {
+          "description": "XML tag names whose blocks are stripped from messages before summarization. Memory/context plugins prepend tagged blocks via prependContext that should not leak into compacted summaries.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "active_memory_plugin",
+            "relevant-memories",
+            "relevant_memories",
+            "hindsight_memories"
+          ]
+        }
+      }
+    },
+    "contracts": {
+      "tools": [
+        "lcm_grep",
+        "lcm_describe",
+        "lcm_expand",
+        "lcm_expand_query"
+      ]
+    },
+    "controlUi": {
+      "entry": "dist/control-ui/index.js",
+      "styles": [
+        "dist/control-ui/index.css"
+      ]
+    },
+    "kind": "context-engine",
+    "commandAliases": [
+      {
+        "name": "lossless",
+        "kind": "runtime-slash"
+      },
+      {
+        "name": "lcm",
+        "kind": "runtime-slash"
+      }
+    ],
+    "imported": true,
+    "dependencyStatus": {
+      "hasDependencies": true,
+      "installed": true,
+      "requiredInstalled": true,
+      "optionalInstalled": true,
+      "missing": [],
+      "missingOptional": [],
+      "dependencies": [
+        {
+          "name": "@sinclair/typebox",
+          "spec": "0.34.48",
+          "installed": true,
+          "optional": false,
+          "resolvedPath": "/tmp/ato-candidates/lossless/package/node_modules/@sinclair/typebox"
+        }
+      ],
+      "optionalDependencies": []
+    }
+  },
+  "shape": "plain-capability",
+  "capabilityMode": "plain",
+  "capabilityCount": 1,
+  "capabilities": [
+    {
+      "kind": "context-engine",
+      "ids": [
+        "lossless-claw"
+      ]
+    }
+  ],
+  "typedHooks": [
+    {
+      "name": "before_reset"
+    },
+    {
+      "name": "gateway_start"
+    },
+    {
+      "name": "gateway_stop"
+    },
+    {
+      "name": "session_end"
+    }
+  ],
+  "customHooks": [],
+  "tools": [
+    {
+      "names": [
+        "lcm_grep"
+      ],
+      "optional": false
+    },
+    {
+      "names": [
+        "lcm_describe"
+      ],
+      "optional": false
+    },
+    {
+      "names": [
+        "lcm_expand"
+      ],
+      "optional": false
+    },
+    {
+      "names": [
+        "lcm_expand_query"
+      ],
+      "optional": false
+    }
+  ],
+  "commands": [
+    "lcm"
+  ],
+  "cliCommands": [],
+  "services": [],
+  "decisions": [],
+  "gatewayDiscoveryServices": [],
+  "gatewayMethods": [],
+  "mcpServers": [],
+  "lspServers": [],
+  "httpRouteCount": 0,
+  "bundleCapabilities": [],
+  "diagnostics": [
+    {
+      "level": "warn",
+      "pluginId": "lossless-claw",
+      "source": "/tmp/ato-candidates/lossless/package/dist/index.js",
+      "message": "typed hook \"before_prompt_build\" blocked because non-bundled plugins must set plugins.entries.lossless-claw.hooks.allowConversationAccess=true"
+    }
+  ],
+  "policy": {
+    "allowedModels": [],
+    "hasAllowedModelsConfig": false
+  },
+  "compatibility": []
+}

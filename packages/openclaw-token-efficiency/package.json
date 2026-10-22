@@ -1,0 +1,30 @@
+{
+  "name": "@agent-token-optimizer/core",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Portable offline policy, usage accounting and reconciliation core",
+  "engines": {
+    "node": ">=24.16.0 <25 || >=26.1.0"
+  },
+  "files": [
+    "src",
+    "config",
+    "README.md"
+  ],
+  "exports": {
+    ".": "./src/index.mjs",
+    "./policy": "./src/policy.mjs",
+    "./usage": "./src/usage.mjs",
+    "./ledger": "./src/ledger.mjs",
+    "./discovery": "./src/discovery.mjs",
+    "./drift": "./src/drift.mjs",
+    "./capabilities": "./src/capabilities.mjs",
+    "./report": "./src/report.mjs",
+    "./config/schema.json": "./config/schema.json",
+    "./config/profiles.json": "./config/profiles.json",
+    "./test-controller": "./src/test-controller.mjs",
+    "./experiment-contracts": "./src/experiment-contracts.mjs",
+    "./replay": "./src/replay.mjs",
+    "./evaluate": "./src/evaluate.mjs"
+  }
+}

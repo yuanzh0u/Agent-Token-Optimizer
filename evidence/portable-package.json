@@ -1,0 +1,32 @@
+{
+  "ok": true,
+  "noWorkspaceDependencies": true,
+  "realModelRequests": 0,
+  "commands": [
+    "core-import",
+    "init",
+    "policy dry-run",
+    "collect-unknown",
+    "report-unknown",
+    "evaluate",
+    "verify",
+    "demo",
+    "collect",
+    "report"
+  ],
+  "integrity": "sha512-sEycaiTnaWb5jydDgFhLIOvEyujZXCueE9uL9WGLeI6vHJv1eNFiD4ReRl8Hxmxae9NGEb2sbT1HvYPNHIN+fg==",
+  "shasum": "ea6c0b28515f39a0a785e0293bee9f1ca89abf05",
+  "packedFileCount": 87,
+  "capturedAt": "2026-10-21T10:32:07.817625+00:00",
+  "kind": "actual-offline-pack-extract-command-proof",
+  "archiveIntegrityScope": "Exact archive inspected before these evidence files were written; regenerated archives have their own npm pack integrity. Runtime source hashes below match the workspace.",
+  "npmInstall": {
+    "offline": true,
+    "ignoreScripts": true,
+    "omitPeer": true,
+    "addedPackages": 1,
+    "linkedCliHelpPassed": true,
+    "openclawInstalled": false
+  },
+  "originalWorkspaceDependenciesUsed": false
+}

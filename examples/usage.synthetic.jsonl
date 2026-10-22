@@ -1,0 +1,1 @@
+{"id":"fixture-1","agentId":"any-agent-42","sessionId":"synthetic-session","runId":"synthetic-run","runtime":"offline-fixture","provider":"SYNTHETIC-no-provider-called","model":"synthetic-model","usage":{"input":120,"output":20,"cacheRead":40,"cacheWrite":0}}

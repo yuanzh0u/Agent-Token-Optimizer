@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "defaults": {"mode": "observe"},
+  "profiles": {
+    "tool-intensive": {"features": {"loopGuard": true, "outputCompression": true}},
+    "long-history": {"features": {"historyCompaction": true, "pruning": true}}
+  },
+  "bindings": [{"id": "example-explicit-binding", "agentId": "any-agent-42", "profile": "tool-intensive"}]
+}

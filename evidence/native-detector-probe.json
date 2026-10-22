@@ -1,0 +1,59 @@
+{
+  "hostVersion": "2026.10.3",
+  "probeKind": "installed-host-detector-unit-probe",
+  "modelRequests": 0,
+  "productionWrites": false,
+  "runTerminationVerified": false,
+  "adapterPrivateToProbe": true,
+  "cases": [
+    {
+      "name": "disabled",
+      "enabled": false,
+      "executions": 100,
+      "warnings": 0,
+      "critical": null,
+      "limit": 100
+    },
+    {
+      "name": "constant-status",
+      "enabled": true,
+      "executions": 20,
+      "warnings": 10,
+      "critical": {
+        "step": 20,
+        "detector": "generic_repeat",
+        "count": 20
+      },
+      "limit": 100
+    },
+    {
+      "name": "version-progress",
+      "enabled": true,
+      "executions": 100,
+      "warnings": 90,
+      "critical": null,
+      "limit": 100
+    },
+    {
+      "name": "timestamp-business-field",
+      "enabled": true,
+      "executions": 100,
+      "warnings": 90,
+      "critical": null,
+      "limit": 100
+    },
+    {
+      "name": "exec-volatile-metadata",
+      "enabled": true,
+      "executions": 20,
+      "warnings": 10,
+      "critical": {
+        "step": 20,
+        "detector": "generic_repeat",
+        "count": 20
+      },
+      "limit": 100
+    }
+  ],
+  "sourceSha256": "971740dfb38f73b659f8a8b4097a22726c1250f09150316fdde5834b74655e28"
+}

@@ -1,0 +1,80 @@
+{
+  "name": "agent-token-optimizer",
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "packages/openclaw-token-efficiency"
+  ],
+  "engines": {
+    "node": ">=24.16.0 <25 || >=26.1.0"
+  },
+  "scripts": {
+    "test": "node --disable-warning=ExperimentalWarning --test --test-isolation=none tests/*.test.mjs",
+    "verify": "node --disable-warning=ExperimentalWarning scripts/verify.mjs",
+    "demo": "node --disable-warning=ExperimentalWarning scripts/demo.mjs"
+  },
+  "description": "Local LLM token accounting, cache-aware usage reports and offline evaluation for AI agents, with an optional OpenClaw observation plugin.",
+  "bin": {
+    "agent-token-optimizer": "./bin/agent-token-optimizer.mjs"
+  },
+  "exports": {
+    ".": "./packages/openclaw-token-efficiency/src/index.mjs",
+    "./collector": "./src/collector.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "packages",
+    "plugins",
+    "openclaw.plugin.json",
+    "scripts",
+    "tests",
+    "examples",
+    "docs",
+    "evidence",
+    "README.md",
+    "README.zh-CN.md",
+    "AGENTS.md",
+    "agent-install.json",
+    "CONTRIBUTING.md",
+    "CHANGELOG.md"
+  ],
+  "openclaw": {
+    "extensions": [
+      "./plugins/openclaw-token-governor/src/index.ts"
+    ],
+    "install": {
+      "minHostVersion": ">=2026.10.3"
+    },
+    "compat": {
+      "pluginApi": ">=2026.10.3"
+    }
+  },
+  "peerDependencies": {
+    "openclaw": "2026.10.3"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuanzh0u/Agent-Token-Optimizer.git"
+  },
+  "homepage": "https://github.com/yuanzh0u/Agent-Token-Optimizer#readme",
+  "bugs": {
+    "url": "https://github.com/yuanzh0u/Agent-Token-Optimizer/issues"
+  },
+  "keywords": [
+    "ai-agents",
+    "llm",
+    "token-usage",
+    "token-accounting",
+    "openclaw",
+    "observability",
+    "cli",
+    "sqlite",
+    "offline-evaluation"
+  ]
+}

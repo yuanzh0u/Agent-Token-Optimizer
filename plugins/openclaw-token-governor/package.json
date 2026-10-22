@@ -1,0 +1,7 @@
+{
+  "name": "@agent-token-optimizer/openclaw-observer-development",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Private descriptor only. Install the root agent-token-optimizer distribution."
+}

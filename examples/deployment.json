@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "policy": "policy.json",
+  "ledger": ".state/usage.sqlite",
+  "reportDirectory": ".state/report",
+  "staleAfterMs": 900000,
+  "sources": [{
+    "id": "SYNTHETIC-explicit-example",
+    "type": "jsonl",
+    "path": "usage.synthetic.jsonl",
+    "conversationAccess": true,
+    "mapping": {
+      "fields": {"input": "usage.input", "output": "usage.output", "cacheRead": "usage.cacheRead", "cacheWrite": "usage.cacheWrite"},
+      "inputIncludesCacheRead": false,
+      "inputIncludesCacheWrite": false,
+      "metadata": {"sourceRecordKey": "id", "agentId": "agentId", "sessionId": "sessionId", "runId": "runId", "provider": "provider", "model": "model", "runtime": "runtime"}
+    }
+  }]
+}

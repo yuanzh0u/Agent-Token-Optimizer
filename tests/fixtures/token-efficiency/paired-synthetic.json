@@ -1,0 +1,311 @@
+{
+  "synthetic": true,
+  "expectedPairCount": 5,
+  "pairs": [
+    {
+      "id": "fixture-0",
+      "baseline": {
+        "stratum": {
+          "task": "fixture-task",
+          "model": "fake",
+          "thinking": "medium",
+          "cache": "warm",
+          "workload": "synthetic"
+        },
+        "sourceKind": "synthetic",
+        "coverage": "complete",
+        "expectedRequests": 1,
+        "success": true,
+        "criticalFacts": true,
+        "sideEffectCount": 0,
+        "latencyMs": 100,
+        "requests": [
+          {
+            "purpose": "primary",
+            "status": "success",
+            "evidenceRef": "fictional-0-baseline",
+            "usage": {
+              "uncachedInput": 100,
+              "output": 10,
+              "cacheRead": 20,
+              "cacheWrite": 0
+            }
+          }
+        ]
+      },
+      "candidate": {
+        "stratum": {
+          "task": "fixture-task",
+          "model": "fake",
+          "thinking": "medium",
+          "cache": "warm",
+          "workload": "synthetic"
+        },
+        "sourceKind": "synthetic",
+        "coverage": "complete",
+        "expectedRequests": 1,
+        "success": true,
+        "criticalFacts": true,
+        "sideEffectCount": 0,
+        "latencyMs": 100,
+        "requests": [
+          {
+            "purpose": "primary",
+            "status": "success",
+            "evidenceRef": "fictional-0-candidate",
+            "usage": {
+              "uncachedInput": 80,
+              "output": 10,
+              "cacheRead": 20,
+              "cacheWrite": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fixture-1",
+      "baseline": {
+        "stratum": {
+          "task": "fixture-task",
+          "model": "fake",
+          "thinking": "medium",
+          "cache": "warm",
+          "workload": "synthetic"
+        },
+        "sourceKind": "synthetic",
+        "coverage": "complete",
+        "expectedRequests": 1,
+        "success": true,
+        "criticalFacts": true,
+        "sideEffectCount": 0,
+        "latencyMs": 100,
+        "requests": [
+          {
+            "purpose": "primary",
+            "status": "success",
+            "evidenceRef": "fictional-1-baseline",
+            "usage": {
+              "uncachedInput": 100,
+              "output": 10,
+              "cacheRead": 20,
+              "cacheWrite": 0
+            }
+          }
+        ]
+      },
+      "candidate": {
+        "stratum": {
+          "task": "fixture-task",
+          "model": "fake",
+          "thinking": "medium",
+          "cache": "warm",
+          "workload": "synthetic"
+        },
+        "sourceKind": "synthetic",
+        "coverage": "complete",
+        "expectedRequests": 1,
+        "success": true,
+        "criticalFacts": true,
+        "sideEffectCount": 0,
+        "latencyMs": 100,
+        "requests": [
+          {
+            "purpose": "primary",
+            "status": "success",
+            "evidenceRef": "fictional-1-candidate",
+            "usage": {
+              "uncachedInput": 80,
+              "output": 10,
+              "cacheRead": 20,
+              "cacheWrite": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fixture-2",
+      "baseline": {
+        "stratum": {
+          "task": "fixture-task",
+          "model": "fake",
+          "thinking": "medium",
+          "cache": "warm",
+          "workload": "synthetic"
+        },
+        "sourceKind": "synthetic",
+        "coverage": "complete",
+        "expectedRequests": 1,
+        "success": true,
+        "criticalFacts": true,
+        "sideEffectCount": 0,
+        "latencyMs": 100,
+        "requests": [
+          {
+            "purpose": "primary",
+            "status": "success",
+            "evidenceRef": "fictional-2-baseline",
+            "usage": {
+              "uncachedInput": 100,
+              "output": 10,
+              "cacheRead": 20,
+              "cacheWrite": 0
+            }
+          }
+        ]
+      },
+      "candidate": {
+        "stratum": {
+          "task": "fixture-task",
+          "model": "fake",
+          "thinking": "medium",
+          "cache": "warm",
+          "workload": "synthetic"
+        },
+        "sourceKind": "synthetic",
+        "coverage": "complete",
+        "expectedRequests": 1,
+        "success": true,
+        "criticalFacts": true,
+        "sideEffectCount": 0,
+        "latencyMs": 100,
+        "requests": [
+          {
+            "purpose": "primary",
+            "status": "success",
+            "evidenceRef": "fictional-2-candidate",
+            "usage": {
+              "uncachedInput": 80,
+              "output": 10,
+              "cacheRead": 20,
+              "cacheWrite": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fixture-3",
+      "baseline": {
+        "stratum": {
+          "task": "fixture-task",
+          "model": "fake",
+          "thinking": "medium",
+          "cache": "warm",
+          "workload": "synthetic"
+        },
+        "sourceKind": "synthetic",
+        "coverage": "complete",
+        "expectedRequests": 1,
+        "success": true,
+        "criticalFacts": true,
+        "sideEffectCount": 0,
+        "latencyMs": 100,
+        "requests": [
+          {
+            "purpose": "primary",
+            "status": "success",
+            "evidenceRef": "fictional-3-baseline",
+            "usage": {
+              "uncachedInput": 100,
+              "output": 10,
+              "cacheRead": 20,
+              "cacheWrite": 0
+            }
+          }
+        ]
+      },
+      "candidate": {
+        "stratum": {
+          "task": "fixture-task",
+          "model": "fake",
+          "thinking": "medium",
+          "cache": "warm",
+          "workload": "synthetic"
+        },
+        "sourceKind": "synthetic",
+        "coverage": "complete",
+        "expectedRequests": 1,
+        "success": true,
+        "criticalFacts": true,
+        "sideEffectCount": 0,
+        "latencyMs": 100,
+        "requests": [
+          {
+            "purpose": "primary",
+            "status": "success",
+            "evidenceRef": "fictional-3-candidate",
+            "usage": {
+              "uncachedInput": 80,
+              "output": 10,
+              "cacheRead": 20,
+              "cacheWrite": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fixture-4",
+      "baseline": {
+        "stratum": {
+          "task": "fixture-task",
+          "model": "fake",
+          "thinking": "medium",
+          "cache": "warm",
+          "workload": "synthetic"
+        },
+        "sourceKind": "synthetic",
+        "coverage": "complete",
+        "expectedRequests": 1,
+        "success": true,
+        "criticalFacts": true,
+        "sideEffectCount": 0,
+        "latencyMs": 100,
+        "requests": [
+          {
+            "purpose": "primary",
+            "status": "success",
+            "evidenceRef": "fictional-4-baseline",
+            "usage": {
+              "uncachedInput": 100,
+              "output": 10,
+              "cacheRead": 20,
+              "cacheWrite": 0
+            }
+          }
+        ]
+      },
+      "candidate": {
+        "stratum": {
+          "task": "fixture-task",
+          "model": "fake",
+          "thinking": "medium",
+          "cache": "warm",
+          "workload": "synthetic"
+        },
+        "sourceKind": "synthetic",
+        "coverage": "complete",
+        "expectedRequests": 1,
+        "success": true,
+        "criticalFacts": true,
+        "sideEffectCount": 0,
+        "latencyMs": 100,
+        "requests": [
+          {
+            "purpose": "primary",
+            "status": "success",
+            "evidenceRef": "fictional-4-candidate",
+            "usage": {
+              "uncachedInput": 80,
+              "output": 10,
+              "cacheRead": 20,
+              "cacheWrite": 0
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

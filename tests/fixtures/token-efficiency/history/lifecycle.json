@@ -1,0 +1,272 @@
+[
+  {
+    "stage": "assembly",
+    "originalHistory": [
+      {
+        "role": "user",
+        "content": "CURRENT: preserve [source:42]"
+      },
+      {
+        "role": "assistant",
+        "toolCalls": [
+          {
+            "id": "call1",
+            "name": "read"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "toolCallId": "call1",
+        "content": "Fact [source:42]"
+      }
+    ],
+    "candidateHistory": [
+      {
+        "role": "user",
+        "content": "CURRENT: preserve [source:42]"
+      },
+      {
+        "role": "assistant",
+        "toolCalls": [
+          {
+            "id": "call1",
+            "name": "read"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "toolCallId": "call1",
+        "content": "Fact [source:42]"
+      }
+    ],
+    "engineOwners": [
+      "legacy"
+    ],
+    "originalEngine": "legacy",
+    "selectedEngine": "legacy",
+    "requirements": [
+      "CURRENT: preserve"
+    ],
+    "citations": [
+      "[source:42]"
+    ]
+  },
+  {
+    "stage": "compaction",
+    "originalHistory": [
+      {
+        "role": "user",
+        "content": "CURRENT: preserve [source:42]"
+      },
+      {
+        "role": "assistant",
+        "toolCalls": [
+          {
+            "id": "call1",
+            "name": "read"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "toolCallId": "call1",
+        "content": "Fact [source:42]"
+      }
+    ],
+    "candidateHistory": [
+      {
+        "role": "user",
+        "content": "CURRENT: preserve [source:42]"
+      },
+      {
+        "role": "assistant",
+        "toolCalls": [
+          {
+            "id": "call1",
+            "name": "read"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "toolCallId": "call1",
+        "content": "Fact [source:42]"
+      }
+    ],
+    "engineOwners": [
+      "legacy"
+    ],
+    "originalEngine": "legacy",
+    "selectedEngine": "legacy",
+    "requirements": [
+      "CURRENT: preserve"
+    ],
+    "citations": [
+      "[source:42]"
+    ]
+  },
+  {
+    "stage": "restart",
+    "originalHistory": [
+      {
+        "role": "user",
+        "content": "CURRENT: preserve [source:42]"
+      },
+      {
+        "role": "assistant",
+        "toolCalls": [
+          {
+            "id": "call1",
+            "name": "read"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "toolCallId": "call1",
+        "content": "Fact [source:42]"
+      }
+    ],
+    "candidateHistory": [
+      {
+        "role": "user",
+        "content": "CURRENT: preserve [source:42]"
+      },
+      {
+        "role": "assistant",
+        "toolCalls": [
+          {
+            "id": "call1",
+            "name": "read"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "toolCallId": "call1",
+        "content": "Fact [source:42]"
+      }
+    ],
+    "engineOwners": [
+      "legacy"
+    ],
+    "originalEngine": "legacy",
+    "selectedEngine": "legacy",
+    "requirements": [
+      "CURRENT: preserve"
+    ],
+    "citations": [
+      "[source:42]"
+    ]
+  },
+  {
+    "stage": "recovery",
+    "originalHistory": [
+      {
+        "role": "user",
+        "content": "CURRENT: preserve [source:42]"
+      },
+      {
+        "role": "assistant",
+        "toolCalls": [
+          {
+            "id": "call1",
+            "name": "read"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "toolCallId": "call1",
+        "content": "Fact [source:42]"
+      }
+    ],
+    "candidateHistory": [
+      {
+        "role": "user",
+        "content": "CURRENT: preserve [source:42]"
+      },
+      {
+        "role": "assistant",
+        "toolCalls": [
+          {
+            "id": "call1",
+            "name": "read"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "toolCallId": "call1",
+        "content": "Fact [source:42]"
+      }
+    ],
+    "engineOwners": [
+      "legacy"
+    ],
+    "originalEngine": "legacy",
+    "selectedEngine": "legacy",
+    "requirements": [
+      "CURRENT: preserve"
+    ],
+    "citations": [
+      "[source:42]"
+    ]
+  },
+  {
+    "stage": "cache-pruning",
+    "originalHistory": [
+      {
+        "role": "user",
+        "content": "CURRENT: preserve [source:42]"
+      },
+      {
+        "role": "assistant",
+        "toolCalls": [
+          {
+            "id": "call1",
+            "name": "read"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "toolCallId": "call1",
+        "content": "Fact [source:42]"
+      }
+    ],
+    "candidateHistory": [
+      {
+        "role": "user",
+        "content": "CURRENT: preserve [source:42]"
+      },
+      {
+        "role": "assistant",
+        "toolCalls": [
+          {
+            "id": "call1",
+            "name": "read"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "toolCallId": "call1",
+        "content": "Fact [source:42]"
+      }
+    ],
+    "engineOwners": [
+      "legacy"
+    ],
+    "originalEngine": "legacy",
+    "selectedEngine": "legacy",
+    "requirements": [
+      "CURRENT: preserve"
+    ],
+    "citations": [
+      "[source:42]"
+    ]
+  }
+]

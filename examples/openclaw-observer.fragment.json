@@ -1,0 +1,12 @@
+{
+  "plugins": {
+    "allow": ["openclaw-token-governor"],
+    "entries": {
+      "openclaw-token-governor": {
+        "enabled": true,
+        "hooks": {"allowConversationAccess": true},
+        "config": {"conversationAccess": true, "queueCapacity": 128}
+      }
+    }
+  }
+}

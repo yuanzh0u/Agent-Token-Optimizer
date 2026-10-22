@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-10-21T10:30:52.860392+00:00",
+  "node": {
+    "version": "v24.21.0",
+    "observation": "actual verification runtime; not a cross-version compatibility claim"
+  },
+  "host": {
+    "version": "2026.10.3",
+    "observation": "actual installed files read; isolated inspect only, no gateway activation",
+    "sourceSha256": {
+      "package.json": "15701883758e8a739b29ba98c80ef855fb2fca46944479d1529600a2545bb625",
+      "dist/plugin-sdk/plugin-entry.js": "0bdcfc34b7e8192870d5c1d5c09b851f052458143202032aa31284caae3c789d",
+      "dist/plugin-entry-2l_2QeB2.mjs": "0e1e84853d3514d75402b22796933abdd9cadc84975678f345b7cd26b0f46eee",
+      "dist/hook-runner-global-Jvv9WFUW.d.ts": "2cb63afa6e42f1ad3b8e364827f3ee459ad602e38694495a610781b35687faeb"
+    }
+  },
+  "project": {
+    "name": "agent-token-optimizer",
+    "version": "0.1.0",
+    "schema": {
+      "applicationId": 1096044337,
+      "userVersion": 2
+    },
+    "archiveIntegrity": "Use the actual npm pack --json integrity for each generated archive; mutable evidence is excluded from source hashes."
+  },
+  "projectSourceSha256": {
+    "bin/agent-token-optimizer.mjs": "d270ffdab0299246b1fdf6be10da7a6dd52a76a1ff74c1dd3a04e4c889c349e8",
+    "examples/deployment.json": "eb371e47b690ec9d601220f3eafc4219b19716f2632d2fad07752ac168283a98",
+    "examples/openclaw-observer.fragment.json": "e82d9f3957fedf74e84b0fc8ffae5bfbe8be0f76e17ae309c7f9964abedc07ed",
+    "examples/policy.json": "98da7cfadd4b3f5196ee8c08246430e8d90585a12cc76f5136f1d4757172b108",
+    "examples/usage.synthetic.jsonl": "b613a094d40b570418009a84afdb026300cd6f6ae157118fdc29db0306beb656",
+    "openclaw.plugin.json": "cc5d89509549c77bc62c1398027446c89bca5b0b3a4499f18ec95f08126a7e84",
+    "package.json": "16bf3fbe37e17c93e2044e8aecd1fca8b891a7c140d5d6e2792d2c894f388911",
+    "packages/openclaw-token-efficiency/config/profiles.json": "1ced73d2dffb48b163db1d43fd4b1728625fc435d5b6bf7a4d01b24ba2647027",
+    "packages/openclaw-token-efficiency/config/schema.json": "c570d1139e293f34c22ceea8f7cf9738515a388b0eb0e2668e9e4990dc658d72",
+    "packages/openclaw-token-efficiency/package.json": "dbde7ecf80a023ad78b9afb47baca84543b4f22851a794cb59fe72498262d931",
+    "packages/openclaw-token-efficiency/src/capabilities.mjs": "8044c9c2acea7b7711798630d796884262644ad536ea385d92506448bc823519",
+    "packages/openclaw-token-efficiency/src/discovery.mjs": "4ffd2ceb6af0d65dd4294508f0caf6348cafacfb4180d3ca95a12941e9eb7b0b",
+    "packages/openclaw-token-efficiency/src/drift.mjs": "cb2961e0206f1b542e946e08aef7098c78deb71d5f828a9013cb60509dfe2da9",
+    "packages/openclaw-token-efficiency/src/evaluate.mjs": "83b16039e4f5ae8213584ffebe993977120ba5cef23aff94190d66fccbf34d55",
+    "packages/openclaw-token-efficiency/src/experiment-contracts.mjs": "25bc7358a501baf649ea09903314e0702f6ac24ce8a6275f521f80f7ad450a9c",
+    "packages/openclaw-token-efficiency/src/index.mjs": "a6c129fae9af36510f1e2cf48c45092491469df9c2d1812ad08cef2b86a0d294",
+    "packages/openclaw-token-efficiency/src/ledger-preflight.mjs": "4e3baf3cbb88348c9f2c4a042ccf910eacd8b08a1350af7867d13ec2e417dd37",
+    "packages/openclaw-token-efficiency/src/ledger.mjs": "5f5abdddc87ec5089d2c93b2a74ff24815f8ac322dea50c09d6192cabcc9e093",
+    "packages/openclaw-token-efficiency/src/policy.mjs": "fa1bf1aa073d92a19af92ea20b35017ac2373be1b8334eb881283557ef9af45b",
+    "packages/openclaw-token-efficiency/src/replay.mjs": "b24efa1ea1b8b5faf354873040189fd44b6021706c63e1cb1f47225d750f509c",
+    "packages/openclaw-token-efficiency/src/report.mjs": "e62009d01879d152a5745b5f5c67349a974eba3f6481796cfe65b5fc947f3485",
+    "packages/openclaw-token-efficiency/src/test-controller.mjs": "509601a4964eafbf6860c8810e862388a3035095e16300a10e60e8eea6d7620c",
+    "packages/openclaw-token-efficiency/src/usage.mjs": "b69b4942c8281611abd446e097ff08d8363dba58f0c8cc4d84cfe909878d6fd8",
+    "plugins/openclaw-token-governor/openclaw.plugin.json": "cc5d89509549c77bc62c1398027446c89bca5b0b3a4499f18ec95f08126a7e84",
+    "plugins/openclaw-token-governor/package.json": "241e5444a22f0a8681f1b208596161c167722afd758fd67c802ebd503d31f875",
+    "plugins/openclaw-token-governor/src/index.ts": "e829b6c99958c7df84b440deeb2df70a7f622d155411199845cda81f459f118c",
+    "plugins/openclaw-token-governor/src/observer.mjs": "11647527be4f42b2c3602e2ef45ac08ab130820ca97baf1223802d82697ba1ab",
+    "scripts/demo.mjs": "4eb6495786a2cc5d81f35005815cb127f840e7fd499dee884ee43c2a02449259",
+    "scripts/token-efficiency-evaluate.mjs": "4be33f931125a0bd052045a733bdd0e4d0f24a4b68335f642379ba311059a436",
+    "scripts/token-efficiency-replay.mjs": "22ea144386a6573a76f5372b81b9a996d165bc6ae6cf14609e21fdef8b587055",
+    "scripts/token-efficiency-test-controller.mjs": "384d65cee5206784124e6e3d79934eb945a9c9ec0ee454fbf99ee52f7ac167b3",
+    "scripts/verify-package.mjs": "8177a5c5564c30f787967b94381d14f43b26d28998dd5ee582b826ffa4f88f1f",
+    "scripts/verify.mjs": "ec5fb59d1593845410a1c76c99ae35a183a3db624a075b3cb729087dc5703270",
+    "src/cli.mjs": "43aee582471e53b365ac95959457783e1ab2e1cac92db8f02c955c54c3334ba9",
+    "src/collector.mjs": "ecc61a87f5b517e50a4833ecc10272e031f0da73e39b96ca2a374a1b10f29e99",
+    "tests/cli-package.test.mjs": "76dd45d020f48953a8d08bdfbd25cf4599ea31081f00df9e02117618b916bf75",
+    "tests/collection-state.test.mjs": "e03e415c9ed7cf932e6c84c439ebf095c20ea38f4e88694c5834419f61c97423",
+    "tests/discovery.test.mjs": "5dcada0014608a738244bd8280e84fc031e799d39ecd2ce838db7facd11742dc",
+    "tests/drift.test.mjs": "0919c4b86e31f91253cb17c6b084e90a615656a37670bdf0c918e4e84d0bdd85",
+    "tests/fixtures/token-efficiency/history/lifecycle.json": "048edb31edb835c6f9d3f96b23f774769027b8826c8887c8bc79ab4b2b559743",
+    "tests/fixtures/token-efficiency/output/fidelity.json": "84088162f2b262f7a3fefe9a4fd97dd7910bb6d2d438e85660a69e704f127697",
+    "tests/fixtures/token-efficiency/paired-synthetic.json": "c43fb42fd845aa7799673834aa9f0f55b8426a488af995285d10bfe5804c7379",
+    "tests/fixtures/token-efficiency/replay.json": "d27c498b3ef7a6534b877d303e913ae6e770468d4e213f01d7660be862393dd6",
+    "tests/helpers/hot-ledger-fixture.mjs": "45ef6820dbe3ae77ac84c4d053a88ff6088fbe2fd62eab8099a00d3897081792",
+    "tests/helpers/sqlite-collection-probe.mjs": "93d480bc40efc7cd5faf8cbc63d8e469e9fa3761994f15a0c338975e38ae1b87",
+    "tests/integration.test.mjs": "4e6067c58910af110c171e91059876edc3a6ae01c0d07391ed91392eede76191",
+    "tests/ledger-safety.test.mjs": "f3d58f9ec3cdfcaa60b6b9d50a509938954ca45192580424ac7f1c150135e487",
+    "tests/ledger.test.mjs": "8188fb70e3a76202d34373bf9b7f229a582fee0e17d744f0691c0fdfd5f4fa6c",
+    "tests/policy-usage.test.mjs": "7d69c7583d272049a5d1c3396d666eed8204224c1af2438b7fec9a587f1f199f",
+    "tests/portability.test.mjs": "8e1c8ac2874df74e807f8b1d221e8eedf5dd4d0b267016f4b4558451d2a48478",
+    "tests/report.test.mjs": "fb1371bfedb9237169089aaca233e4b6c1240b887d9984f7df9a188848226f9c",
+    "tests/token-efficiency-contracts.test.mjs": "831ec4d64f06be96fc181a432a5a46a4d69099a1d2639f6a0cbafb0f5111431f",
+    "tests/token-efficiency-controller.test.mjs": "09f98562bd443a4677e3e80c48075d8121d838ad4a94a61e5be88126561974d7",
+    "tests/token-efficiency-evaluate.test.mjs": "6fe3373f78929262595868dd0f4501c9467c56cb351f711f5d50b2157b69c431",
+    "tests/token-efficiency-public-api.test.mjs": "7da270bc2a20170b5c3d318b3a31e37b49c78d26dafc1244d78e69e6e5b40261",
+    "tests/token-efficiency-replay.test.mjs": "19fed96593197efebc3d660685432058f49df5e6cf02b950f829d6e6218b4edb",
+    "tests/token-efficiency-scripts.test.mjs": "828004686f1d89c276f65143ef68f40b08b2f922894a1588601274f8f36f143f"
+  },
+  "candidates": [
+    {
+      "name": "@openclaw/tokenjuice",
+      "version": "2026.10.3",
+      "integrity": "sha512-CtWXVlRgXlFRwnG51V4t4zXPZSz4kS+GN4r02J0PdZew7+SN4zMbsazHSnK3jOSYvIQYMqbZ4+7X8vyecMQZOw==",
+      "integrityVerified": true,
+      "downloadOnly": true,
+      "adoption": "pending_validation",
+      "packageJsonSha256": "bee6e5ae5ea87b530d580c241091d079373ae2a23ee679dd1972c7db562e74c2",
+      "task3InstallationPerformed": false,
+      "task3ArchiveReverification": false,
+      "evidenceReference": "evidence/candidate-packages.json",
+      "decision": "deferred; exact downloaded metadata does not establish production adoption"
+    },
+    {
+      "name": "@martian-engineering/lossless-claw",
+      "version": "1.2.0",
+      "integrity": "sha512-xC2b8bp72tsUKB1iqKN5TYiCJoHW9rAVdMSdY0cjJuxR+6irVUwvW2ziFfYOL/qCTi4DHr3eUCgDIcTzhuifYA==",
+      "integrityVerified": true,
+      "downloadOnly": true,
+      "adoption": "pending_validation",
+      "packageJsonSha256": "17bd54e7c931314c8e3c3b3ef21318f723609898e9a35f4aa8620408d5262fbf",
+      "task3InstallationPerformed": false,
+      "task3ArchiveReverification": false,
+      "evidenceReference": "evidence/candidate-packages.json",
+      "decision": "deferred; exact downloaded metadata does not establish production adoption"
+    },
+    {
+      "name": "tokenjuice",
+      "version": "0.8.5",
+      "integrity": "sha512-5soJ9faUut2eAC8f4rHxBH3lipdK2mtgy6N8uWvYCnt3MZ37tKYeR6e5PjEyyO3NrSkt1PMG3KZxQIc10urA3w==",
+      "integrityVerified": true,
+      "downloadOnly": true,
+      "adoption": "pending_validation",
+      "packageJsonSha256": "d6bb91d2f0967e0a512debd11c2631bc3828ae9d472dd94d87ab66574ce2b3c4",
+      "task3InstallationPerformed": false,
+      "task3ArchiveReverification": false,
+      "evidenceReference": "evidence/candidate-packages.json",
+      "decision": "deferred; exact downloaded metadata does not establish production adoption"
+    },
+    {
+      "name": "@sinclair/typebox",
+      "version": "0.34.48",
+      "integrity": "sha512-kKJTNuK3AQOrgjjotVxMrCn1sUJwM76wMszfq1kdU4uYVJjvEWuFQ6HgvLt4Xz3fSmZlTOxJ/Ie13KnIcWQXFA==",
+      "integrityVerified": true,
+      "downloadOnly": true,
+      "adoption": "pending_validation",
+      "task3InstallationPerformed": false,
+      "task3ArchiveReverification": false,
+      "evidenceReference": "evidence/candidate-packages.json",
+      "decision": "deferred; exact downloaded metadata does not establish production adoption"
+    }
+  ],
+  "capabilities": {
+    "observationHook": "isolated import/registration only on exact host; lifecycle fixture partial",
+    "L1": "unsupported",
+    "L2": "unsupported",
+    "L3": "unsupported",
+    "hardBillingCap": "unsupported",
+    "realModelPairs": "pending",
+    "soak24To72Hours": "pending",
+    "productionAdoption": "pending"
+  },
+  "projectSourceCapturedAt": "2026-10-21T10:59:01.694098+00:00",
+  "projectSourceRevisionNote": "Final combined reporting fix: durable content-free collection health bound to successful publications, explicit persisted source scope with exact v0/v1->v2 migration. Prior host registration evidence remains historical; no host activation or new billing coverage claim.",
+  "publicDistribution": {
+    "preparedAt": "2026-10-22",
+    "runtimeImplementationChanged": false,
+    "removedPrivateLockedArtifacts": [],
+    "notes": [
+      "Original pilot mappings and private planning history are not part of public distribution.",
+      "Package metadata changed for canonical GitHub distribution.",
+      "Host evidence remains historical and partial; new packaging does not extend host compatibility."
+    ]
+  }
+}

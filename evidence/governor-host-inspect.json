@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-10-21T10:32:07.817625+00:00",
+  "kind": "isolated-installed-host-registration-from-fresh-root-tarball",
+  "hostVersion": "2026.10.3",
+  "nodeVersion": "v24.21.0",
+  "archiveIntegrity": "sha512-sEycaiTnaWb5jydDgFhLIOvEyujZXCueE9uL9WGLeI6vHJv1eNFiD4ReRl8Hxmxae9NGEb2sbT1HvYPNHIN+fg==",
+  "archiveIntegrityScope": "Exact archive inspected before these evidence files were written; regenerated archives have their own npm pack integrity. Runtime source hashes below match the workspace.",
+  "sourceSha256": {
+    "plugins/openclaw-token-governor/src/index.ts": "e829b6c99958c7df84b440deeb2df70a7f622d155411199845cda81f459f118c",
+    "plugins/openclaw-token-governor/src/observer.mjs": "11647527be4f42b2c3602e2ef45ac08ab130820ca97baf1223802d82697ba1ab",
+    "packages/openclaw-token-efficiency/src/ledger.mjs": "afb2f6153b0cd7b0f07a2d29bbacd1a20e65359d474677ac03dea9d5bb51e698",
+    "packages/openclaw-token-efficiency/src/usage.mjs": "b69b4942c8281611abd446e097ff08d8363dba58f0c8cc4d84cfe909878d6fd8",
+    "openclaw.plugin.json": "cc5d89509549c77bc62c1398027446c89bca5b0b3a4499f18ec95f08126a7e84",
+    "package.json": "26f1129142d448ae85cecb51f66f453db6f95e1ec6874c9d477b68bfccff836f"
+  },
+  "registrationModeExpectedFromHostInspectContract": "tool-discovery",
+  "serviceStartVerified": false,
+  "actualGatewayEventCoverageVerified": false,
+  "realModelRequests": 0,
+  "cronEnabled": false,
+  "channelsConfigured": false,
+  "inheritedCredentials": false,
+  "productionWrites": false,
+  "probes": {
+    "granted": {
+      "exitCode": 0,
+      "pluginStatus": "loaded",
+      "imported": true,
+      "requiredDependenciesInstalled": true,
+      "typedHooks": [
+        {
+          "name": "llm_output"
+        }
+      ],
+      "services": [],
+      "contextEngineIds": [],
+      "diagnostics": [],
+      "policy": {
+        "allowConversationAccess": true,
+        "allowedModels": [],
+        "hasAllowedModelsConfig": false
+      },
+      "compatibility": [
+        {
+          "pluginId": "openclaw-token-governor",
+          "code": "hook-only",
+          "compatCode": "hook-only-plugin-shape",
+          "severity": "info",
+          "message": "is hook-only. This remains a supported compatibility path, but it has not migrated to explicit capability registration yet."
+        }
+      ],
+      "stderrEmpty": true
+    },
+    "denied": {
+      "exitCode": 0,
+      "pluginStatus": "loaded",
+      "imported": true,
+      "requiredDependenciesInstalled": true,
+      "typedHooks": [],
+      "services": [],
+      "contextEngineIds": [],
+      "diagnostics": [
+        {
+          "level": "warn",
+          "pluginId": "openclaw-token-governor",
+          "message": "typed hook \"llm_output\" blocked because non-bundled plugins must set plugins.entries.openclaw-token-governor.hooks.allowConversationAccess=true"
+        }
+      ],
+      "policy": {
+        "allowConversationAccess": false,
+        "allowedModels": [],
+        "hasAllowedModelsConfig": false
+      },
+      "compatibility": [],
+      "stderrEmpty": true
+    }
+  }
+}
