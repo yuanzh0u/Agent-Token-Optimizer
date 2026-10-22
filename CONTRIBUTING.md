@@ -9,3 +9,7 @@ Keep agent identities configurable, missing usage distinct from zero, billing id
 For optional host work, state the exact host/runtime/provider/work-class scope and keep it in an isolated instance. Changes involving real models, external side effects or production enablement need an explicit request from the operator. Use docs/operations.md for state migration/recovery and rollback boundaries.
 
 Maintainer: [@yuanzh0u](https://github.com/yuanzh0u). Questions and bug reports: [GitHub Issues](https://github.com/yuanzh0u/Agent-Token-Optimizer/issues).
+
+## Optional GitHub Actions verification
+
+The initial publication includes [a verification workflow template](docs/github-actions.example.yml). It is not an active workflow and does not establish a passing GitHub Actions run. A maintainer with workflow-write permission can copy it to `.github/workflows/verify.yml` and commit it to enable the same verification on main, version tags and pull requests. It uses official checkout/setup-node v7 actions, Node24.21.0, read-only repository permissions and no dependency-install step.
